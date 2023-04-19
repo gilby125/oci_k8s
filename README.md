@@ -21,7 +21,7 @@ Need an Oracle Cloud account
 - $ export TF_VAR_ssh_public_key=<your public key>
   
 cd /oci-infrastructure
-terraform apply
+
   terraform apply -var="compartment_id=ocid1.compartment.oc1.............." -var="region=us-ashburn-1" -var="ssh_public_key=ssh-rsa ............"
 
   
