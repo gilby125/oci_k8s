@@ -22,11 +22,10 @@ Need an Oracle Cloud account
   
 cd /oci-infrastructure
 
-  terraform apply -var="compartment_id=ocid1.compartment.oc1.............." -var="region=us-ashburn-1" -var="ssh_public_key=ssh-rsa ............"
-
+  terraform apply -var="compartment_id=ocid1.compartment.oc1.............." -var="region=us-ashburn-1" -var="ssh_public_key=ssh-rsa ............
   
 create kubeconfig file:
-$ oci ce cluster create-kubeconfig --cluster-id <cluster OCID> --file ~/.kube/ocs-k8s-config --region <region> --token-version 2.0.0 --kube-endpoint PUBLIC_ENDPOINT
+$ oci ce cluster create-kubeconfig --cluster-id <cluster OCID> --file ~/.kube/ocs-k8s-config --region us-ashburn-1  --token-version 2.0.0 --kube-endpoint PUBLIC_ENDPOINT
 
 $ export KUBECONFIG=~/.kube/ocs-k8s-config
 
