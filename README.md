@@ -15,6 +15,11 @@ Need an Oracle Cloud account
 - kubectl installed
 
 
+
+$ export TF_VAR_compartment_id=<your compartment ocid>
+$ export TF_VAR_region=<your region>
+$ export TF_VAR_ssh_public_key=<your public key>
+  
 create kubeconfig file:
 $ oci ce cluster create-kubeconfig --cluster-id <cluster OCID> --file ~/.kube/ocs-k8s-config --region <region> --token-version 2.0.0 --kube-endpoint PUBLIC_ENDPOINT
 
