@@ -30,3 +30,7 @@ $ oci ce cluster create-kubeconfig --cluster-id <cluster OCID> --file ~/.kube/oc
 $ export KUBECONFIG=~/.kube/ocs-k8s-config
 
 $ kubectl get nodes  
+
+cd ./k8s_infrastructure
+  
+terraform apply
