@@ -32,3 +32,6 @@ $ kubectl get nodes
 cd ./k8s_infrastructure
   
 terraform apply
+
+
+terraform output >> ./home/{..dir...}/yada.tfvars
