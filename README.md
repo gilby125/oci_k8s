@@ -29,9 +29,12 @@ $ export KUBECONFIG=~/.kube/ocs-k8s-config
 
 $ kubectl get nodes  
 
+
+terraform output
+
 cd ./k8s_infrastructure
   
+terraform init
+
+
 terraform apply
-
-
-terraform output >> ./home/{..dir...}/yada.tfvars

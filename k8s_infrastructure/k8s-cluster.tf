@@ -1,5 +1,5 @@
 provider "kubernetes" {
-  config_path = "~/.kube/free-k8s-config"
+  config_path = "~/.kube/oci-k8s-config"
 }
 
 provider "oci" {
