@@ -4,9 +4,7 @@ k8s on OCI free tier
 Need an Oracle Cloud account
 - Need a compartment you want the resources to provision in – it can be the root compartment  
 
-- Have a user that has permissions to access the necessary resources – can be your root user if you want to
-
-- Optionally an SSH key you want to use to provision your Kubernetes worker nodes and wanna make sure you have some way to access them if needed
+- Optionally an SSH key for worker nodes 
 
 - OCI CLI installed
 
