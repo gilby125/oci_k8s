@@ -1,2 +1,1 @@
-FROM nginx:latest
-COPY index.html /usr/share/nginx/html/index.html
+FROM --platform=linux/arm64 homeassistant/home-assistant:latest

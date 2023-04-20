@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx
+  name: HomeAssistant
   labels:
-    app: nginx
+    app: HomeAssistant
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: nginx
+      app: HomeAssistant
   template:
     metadata:
       labels:
-        app: nginx
+        app: HomeAssistant
     spec:
       containers:
-        - name: nginx
+        - name: HomeAssistant
           image: fra.ocir.io/<DOCKER_OBJECT_STORAGE_NAMESPACE>/free-kubernetes-nginx:latest
           ports:
-            - containerPort: 80
+            - containerPort: 8123
       imagePullSecrets:
       - name: free-registry-secret
