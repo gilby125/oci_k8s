@@ -38,5 +38,4 @@ terraform init
 
 
 terraform apply
-
-![oci_layout](project_pluralith-local-project%2Frun_2287541%2Frun_2287541_1682085300049.png)
+ ![Alt text](oci_infrastructure/project_pluralith-local-project/run_2287541/run_2287541_1682085300049.png)
