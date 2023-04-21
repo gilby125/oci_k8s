@@ -1,1 +1,1 @@
-FROM --platform=linux/arm64 homeassistant/home-assistant:latest
+FROM --platform=linux/arm64 easypanel/easypanel:latest

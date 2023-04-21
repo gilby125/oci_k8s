@@ -4,7 +4,7 @@ provider "oci" {
 
 module "vcn" {
   source  = "oracle-terraform-modules/vcn/oci"
-  version = "3.1.0"
+  version = "3.5.4"
 
   compartment_id = var.compartment_id
   region         = var.region
@@ -109,6 +109,17 @@ resource "oci_core_security_list" "public_subnet_sl" {
     tcp_options {
       max = 80
       min = 80
+    }
+  } 
+  ingress_security_rules {
+    protocol    = "6"
+    source      = "0.0.0.0/0"
+    source_type = "CIDR_BLOCK"
+    stateless   = false
+
+    tcp_options {
+      max = 443
+      min = 443
     }
   } 
 
