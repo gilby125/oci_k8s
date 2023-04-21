@@ -1617,51 +1617,42 @@
  "output_changes": {
   "k8s-cluster-id": {
    "actions": [
-    "no-op"
+    "create"
    ],
-   "after": "ocid1.cluster.oc1.iad.aaaaaaaazwmsedu4onn57sdunk5f2cwnr2onrvgbcc7loowjocogl637xm5q",
    "after_sensitive": false,
-   "after_unknown": false,
-   "before": "ocid1.cluster.oc1.iad.aaaaaaaazwmsedu4onn57sdunk5f2cwnr2onrvgbcc7loowjocogl637xm5q",
+   "after_unknown": true,
+   "before": null,
    "before_sensitive": false
   },
   "node_pool_id": {
    "actions": [
-    "no-op"
+    "create"
    ],
-   "after": "ocid1.nodepool.oc1.iad.aaaaaaaaq5tgpnb2osioc7s3il6lsfcnto5ridkl2cpjierr5n5wyqfyfgxq",
    "after_sensitive": false,
-   "after_unknown": false,
-   "before": "ocid1.nodepool.oc1.iad.aaaaaaaaq5tgpnb2osioc7s3il6lsfcnto5ridkl2cpjierr5n5wyqfyfgxq",
+   "after_unknown": true,
+   "before": null,
    "before_sensitive": false
   },
   "public_subnet_id": {
    "actions": [
-    "no-op"
+    "create"
    ],
-   "after": "ocid1.subnet.oc1.iad.aaaaaaaaumsvv4jxaetmpqa4ak7h5uewkzkq37ayvyoknvk337a6elnmsf6q",
    "after_sensitive": false,
-   "after_unknown": false,
-   "before": "ocid1.subnet.oc1.iad.aaaaaaaaumsvv4jxaetmpqa4ak7h5uewkzkq37ayvyoknvk337a6elnmsf6q",
+   "after_unknown": true,
+   "before": null,
    "before_sensitive": false
   }
  },
  "planned_values": {
   "outputs": {
    "k8s-cluster-id": {
-    "sensitive": false,
-    "type": "string",
-    "value": "ocid1.cluster.oc1.iad.aaaaaaaazwmsedu4onn57sdunk5f2cwnr2onrvgbcc7loowjocogl637xm5q"
+    "sensitive": false
    },
    "node_pool_id": {
-    "sensitive": false,
-    "type": "string",
-    "value": "ocid1.nodepool.oc1.iad.aaaaaaaaq5tgpnb2osioc7s3il6lsfcnto5ridkl2cpjierr5n5wyqfyfgxq"
+    "sensitive": false
    },
    "public_subnet_id": {
-    "sensitive": false,
-    "type": "string",
-    "value": "ocid1.subnet.oc1.iad.aaaaaaaaumsvv4jxaetmpqa4ak7h5uewkzkq37ayvyoknvk337a6elnmsf6q"
+    "sensitive": false
    }
   },
   "root_module": {
@@ -1684,22 +1675,8 @@
        },
        "type": "oci_core_default_security_list",
        "values": {
-        "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-        "defined_tags": {
-         "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-         "Oracle-Tags.CreatedOn": "2023-04-20T11:21:01.400Z"
-        },
-        "display_name": "Default Security List for k8s-vcn",
         "egress_security_rules": [],
-        "freeform_tags": {
-         "module": "oracle-terraform-modules/vcn/oci",
-         "terraformed": "Please do not edit manually"
-        },
-        "id": "ocid1.securitylist.oc1.iad.aaaaaaaaiarlfgnrfsyka7u5ihdnpvr4tlro3rwoevu5dmae5op2gsdustha",
         "ingress_security_rules": [],
-        "manage_default_resource_id": "ocid1.securitylist.oc1.iad.aaaaaaaaiarlfgnrfsyka7u5ihdnpvr4tlro3rwoevu5dmae5op2gsdustha",
-        "state": "AVAILABLE",
-        "time_created": "2023-04-20 11:21:01.717 +0000 UTC",
         "timeouts": null
        }
       },
@@ -1717,22 +1694,13 @@
        "type": "oci_core_internet_gateway",
        "values": {
         "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-        "defined_tags": {
-         "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-         "Oracle-Tags.CreatedOn": "2023-04-20T11:21:06.268Z"
-        },
         "display_name": "internet-gateway",
         "enabled": true,
         "freeform_tags": {
          "module": "oracle-terraform-modules/vcn/oci",
          "terraformed": "Please do not edit manually"
         },
-        "id": "ocid1.internetgateway.oc1.iad.aaaaaaaarazkzf6xjapifjjhnnxc3dmwsrm5aq3mzmvs5msv4fvaqgu5rida",
-        "route_table_id": null,
-        "state": "AVAILABLE",
-        "time_created": "2023-04-20 11:21:06.353 +0000 UTC",
-        "timeouts": null,
-        "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a"
+        "timeouts": null
        }
       },
       {
@@ -1748,25 +1716,13 @@
        },
        "type": "oci_core_nat_gateway",
        "values": {
-        "block_traffic": false,
         "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-        "defined_tags": {
-         "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-         "Oracle-Tags.CreatedOn": "2023-04-20T11:21:05.886Z"
-        },
         "display_name": "nat-gateway",
         "freeform_tags": {
          "module": "oracle-terraform-modules/vcn/oci",
          "terraformed": "Please do not edit manually"
         },
-        "id": "ocid1.natgateway.oc1.iad.aaaaaaaa5wyuko47x2fpo6ylhnz42nhagzklharwenmvyo26knjbsp6w46gq",
-        "nat_ip": "129.80.173.126",
-        "public_ip_id": "ocid1.publicip.oc1.iad.aaaaaaaatz6mzcbze2dethmzb6ybvhbugnfuydyekkotzslfb5ndd6wdr7vq",
-        "route_table_id": null,
-        "state": "AVAILABLE",
-        "time_created": "2023-04-20 11:21:06.35 +0000 UTC",
-        "timeouts": null,
-        "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a"
+        "timeouts": null
        }
       },
       {
@@ -1786,30 +1742,18 @@
        "type": "oci_core_route_table",
        "values": {
         "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-        "defined_tags": {
-         "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-         "Oracle-Tags.CreatedOn": "2023-04-20T11:21:07.244Z"
-        },
         "display_name": "internet-route",
         "freeform_tags": {
          "module": "oracle-terraform-modules/vcn/oci",
          "terraformed": "Please do not edit manually"
         },
-        "id": "ocid1.routetable.oc1.iad.aaaaaaaa7oxz5rcz7fjxycethp4pjliohbsj4ty5pnkx37pqmdkx3efytada",
         "route_rules": [
          {
-          "cidr_block": "",
           "description": "Terraformed - Auto-generated at Internet Gateway creation: Internet Gateway as default gateway",
-          "destination": "0.0.0.0/0",
-          "destination_type": "CIDR_BLOCK",
-          "network_entity_id": "ocid1.internetgateway.oc1.iad.aaaaaaaarazkzf6xjapifjjhnnxc3dmwsrm5aq3mzmvs5msv4fvaqgu5rida",
-          "route_type": ""
+          "destination": "0.0.0.0/0"
          }
         ],
-        "state": "AVAILABLE",
-        "time_created": "2023-04-20 11:21:07.268 +0000 UTC",
-        "timeouts": null,
-        "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a"
+        "timeouts": null
        }
       },
       {
@@ -1830,38 +1774,24 @@
        "type": "oci_core_route_table",
        "values": {
         "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-        "defined_tags": {
-         "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-         "Oracle-Tags.CreatedOn": "2023-04-20T11:21:08.931Z"
-        },
         "display_name": "nat-route",
         "freeform_tags": {
          "module": "oracle-terraform-modules/vcn/oci",
          "terraformed": "Please do not edit manually"
         },
-        "id": "ocid1.routetable.oc1.iad.aaaaaaaaeqnl4gvwhvrbnu47abcz4qwjx5o7kicwtm6y4ykhq2muks7al2qa",
         "route_rules": [
          {
-          "cidr_block": "",
           "description": "Terraformed - Auto-generated at NAT Gateway creation: NAT Gateway as default gateway",
           "destination": "0.0.0.0/0",
-          "destination_type": "CIDR_BLOCK",
-          "network_entity_id": "ocid1.natgateway.oc1.iad.aaaaaaaa5wyuko47x2fpo6ylhnz42nhagzklharwenmvyo26knjbsp6w46gq",
-          "route_type": ""
+          "destination_type": "CIDR_BLOCK"
          },
          {
-          "cidr_block": "",
           "description": "Terraformed - Auto-generated at Service Gateway creation: All Services in region to Service Gateway",
           "destination": "all-iad-services-in-oracle-services-network",
-          "destination_type": "SERVICE_CIDR_BLOCK",
-          "network_entity_id": "ocid1.servicegateway.oc1.iad.aaaaaaaa254mwjk4dnx3f7qkyd4belhpsbbcv4a4htsfitskrvsh57abucxa",
-          "route_type": ""
+          "destination_type": "SERVICE_CIDR_BLOCK"
          }
         ],
-        "state": "AVAILABLE",
-        "time_created": "2023-04-20 11:21:09.021 +0000 UTC",
-        "timeouts": null,
-        "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a"
+        "timeouts": null
        }
       },
       {
@@ -1880,29 +1810,18 @@
        },
        "type": "oci_core_service_gateway",
        "values": {
-        "block_traffic": false,
         "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-        "defined_tags": {
-         "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-         "Oracle-Tags.CreatedOn": "2023-04-20T11:21:06.211Z"
-        },
         "display_name": "service-gateway",
         "freeform_tags": {
          "module": "oracle-terraform-modules/vcn/oci",
          "terraformed": "Please do not edit manually"
         },
-        "id": "ocid1.servicegateway.oc1.iad.aaaaaaaa254mwjk4dnx3f7qkyd4belhpsbbcv4a4htsfitskrvsh57abucxa",
-        "route_table_id": null,
         "services": [
          {
-          "service_id": "ocid1.service.oc1.iad.aaaaaaaam4zfmy2rjue6fmglumm3czgisxzrnvrwqeodtztg7hwa272mlfna",
-          "service_name": "All IAD Services In Oracle Services Network"
+          "service_id": "ocid1.service.oc1.iad.aaaaaaaam4zfmy2rjue6fmglumm3czgisxzrnvrwqeodtztg7hwa272mlfna"
          }
         ],
-        "state": "AVAILABLE",
-        "time_created": "2023-04-20 11:21:07.152 +0000 UTC",
-        "timeouts": null,
-        "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a"
+        "timeouts": null
        }
       },
       {
@@ -1924,35 +1843,18 @@
        },
        "type": "oci_core_vcn",
        "values": {
-        "byoipv6cidr_blocks": [],
-        "byoipv6cidr_details": [],
-        "cidr_block": "10.0.0.0/16",
         "cidr_blocks": [
          "10.0.0.0/16"
         ],
         "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-        "default_dhcp_options_id": "ocid1.dhcpoptions.oc1.iad.aaaaaaaadpggo7tmippv6xq7vejqdlepiz2wagxalddvj42atmimzudemnga",
-        "default_route_table_id": "ocid1.routetable.oc1.iad.aaaaaaaazdgsqvolougnrttxfaewssbm4bx4qiseh77ms6rwvcngyfjhvbua",
-        "default_security_list_id": "ocid1.securitylist.oc1.iad.aaaaaaaaiarlfgnrfsyka7u5ihdnpvr4tlro3rwoevu5dmae5op2gsdustha",
-        "defined_tags": {
-         "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-         "Oracle-Tags.CreatedOn": "2023-04-20T11:21:01.400Z"
-        },
         "display_name": "k8s-vcn",
         "dns_label": "k8svcn",
         "freeform_tags": {
          "module": "oracle-terraform-modules/vcn/oci",
          "terraformed": "Please do not edit manually"
         },
-        "id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a",
-        "ipv6cidr_blocks": [],
-        "ipv6private_cidr_blocks": [],
         "is_ipv6enabled": false,
-        "is_oracle_gua_allocation_enabled": null,
-        "state": "AVAILABLE",
-        "time_created": "2023-04-20 11:21:01.717 +0000 UTC",
-        "timeouts": null,
-        "vcn_domain_name": "k8svcn.oraclevcn.com"
+        "timeouts": null
        }
       }
      ]
@@ -1970,20 +1872,10 @@
      },
      "type": "oci_artifacts_container_repository",
      "values": {
-      "billable_size_in_gbs": "0",
       "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-      "created_by": "ocid1.user.oc1..aaaaaaaa34q5m5rhn2i3o6g7ufvdv7lornxxln65h4cljz4rlxxtvdnqeerq",
       "display_name": "kubernetes-nginx",
-      "id": "ocid1.containerrepo.oc1.iad.0.idxfqxqnytht.aaaaaaaaveoc3axa5cpyffvto73lyseauue4o47msvehl5vjfbtga3s5nnxa",
-      "image_count": 0,
       "is_immutable": false,
       "is_public": false,
-      "layer_count": 0,
-      "layers_size_in_bytes": "0",
-      "readme": [],
-      "state": "AVAILABLE",
-      "time_created": "2023-04-20 11:21:01.521 +0000 UTC",
-      "time_last_pushed": null,
       "timeouts": null
      }
     },
@@ -1995,108 +1887,40 @@
      "schema_version": 0,
      "sensitive_values": {
       "available_kubernetes_upgrades": [],
-      "cluster_pod_network_options": [
-       {}
-      ],
+      "cluster_pod_network_options": [],
       "defined_tags": {},
       "endpoint_config": [
-       {
-        "nsg_ids": []
-       }
-      ],
-      "endpoints": [
        {}
       ],
+      "endpoints": [],
       "freeform_tags": {},
-      "image_policy_config": [
-       {
-        "key_details": []
-       }
-      ],
-      "metadata": [
-       {}
-      ],
+      "image_policy_config": [],
+      "metadata": [],
       "options": [
        {
         "add_ons": [
          {}
         ],
-        "admission_controller_options": [
-         {}
-        ],
+        "admission_controller_options": [],
         "kubernetes_network_config": [
          {}
         ],
-        "persistent_volume_config": [
-         {
-          "defined_tags": {},
-          "freeform_tags": {}
-         }
-        ],
-        "service_lb_config": [
-         {
-          "defined_tags": {},
-          "freeform_tags": {}
-         }
-        ],
-        "service_lb_subnet_ids": [
-         false
-        ]
+        "persistent_volume_config": [],
+        "service_lb_config": [],
+        "service_lb_subnet_ids": []
        }
       ]
      },
      "type": "oci_containerengine_cluster",
      "values": {
-      "available_kubernetes_upgrades": [],
-      "cluster_pod_network_options": [
-       {
-        "cni_type": "FLANNEL_OVERLAY"
-       }
-      ],
       "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-      "defined_tags": {
-       "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-       "Oracle-Tags.CreatedOn": "2023-04-20T11:21:12.575Z"
-      },
       "endpoint_config": [
        {
         "is_public_ip_enabled": true,
-        "nsg_ids": [],
-        "subnet_id": "ocid1.subnet.oc1.iad.aaaaaaaaumsvv4jxaetmpqa4ak7h5uewkzkq37ayvyoknvk337a6elnmsf6q"
+        "nsg_ids": null
        }
       ],
-      "endpoints": [
-       {
-        "kubernetes": "",
-        "private_endpoint": "10.0.0.246:6443",
-        "public_endpoint": "129.80.195.209:6443",
-        "vcn_hostname_endpoint": ""
-       }
-      ],
-      "freeform_tags": {},
-      "id": "ocid1.cluster.oc1.iad.aaaaaaaazwmsedu4onn57sdunk5f2cwnr2onrvgbcc7loowjocogl637xm5q",
-      "image_policy_config": [
-       {
-        "is_policy_enabled": false,
-        "key_details": []
-       }
-      ],
-      "kms_key_id": null,
       "kubernetes_version": "v1.25.4",
-      "lifecycle_details": null,
-      "metadata": [
-       {
-        "created_by_user_id": "ocid1.user.oc1..aaaaaaaa34q5m5rhn2i3o6g7ufvdv7lornxxln65h4cljz4rlxxtvdnqeerq",
-        "created_by_work_request_id": "ocid1.clustersworkrequest.oc1.iad.aaaaaaaa37aozq6v5pq2rrl2mqleqmtwg66hnyi7k67jsqneuwhkrsglk6ea",
-        "deleted_by_user_id": "",
-        "deleted_by_work_request_id": "",
-        "time_created": "2023-04-20 11:21:14 +0000 UTC",
-        "time_deleted": "",
-        "time_updated": "",
-        "updated_by_user_id": "",
-        "updated_by_work_request_id": ""
-       }
-      ],
       "name": "k8s-cluster",
       "options": [
        {
@@ -2106,38 +1930,15 @@
           "is_tiller_enabled": false
          }
         ],
-        "admission_controller_options": [
-         {
-          "is_pod_security_policy_enabled": false
-         }
-        ],
         "kubernetes_network_config": [
          {
           "pods_cidr": "10.244.0.0/16",
           "services_cidr": "10.96.0.0/16"
          }
-        ],
-        "persistent_volume_config": [
-         {
-          "defined_tags": {},
-          "freeform_tags": {}
-         }
-        ],
-        "service_lb_config": [
-         {
-          "defined_tags": {},
-          "freeform_tags": {}
-         }
-        ],
-        "service_lb_subnet_ids": [
-         "ocid1.subnet.oc1.iad.aaaaaaaaumsvv4jxaetmpqa4ak7h5uewkzkq37ayvyoknvk337a6elnmsf6q"
         ]
        }
       ],
-      "state": "ACTIVE",
-      "timeouts": null,
-      "type": "BASIC_CLUSTER",
-      "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a"
+      "timeouts": null
      }
     },
     {
@@ -2156,12 +1957,7 @@
        {
         "defined_tags": {},
         "freeform_tags": {},
-        "node_pool_pod_network_option_details": [
-         {
-          "pod_nsg_ids": [],
-          "pod_subnet_ids": []
-         }
-        ],
+        "node_pool_pod_network_option_details": [],
         "nsg_ids": [],
         "placement_configs": [
          {
@@ -2184,38 +1980,16 @@
       "node_shape_config": [
        {}
       ],
-      "node_source": [
-       {}
-      ],
+      "node_source": [],
       "node_source_details": [
        {}
       ],
-      "nodes": [
-       {
-        "defined_tags": {},
-        "error": [],
-        "freeform_tags": {}
-       },
-       {
-        "defined_tags": {},
-        "error": [],
-        "freeform_tags": {}
-       }
-      ],
-      "subnet_ids": [
-       false
-      ]
+      "nodes": [],
+      "subnet_ids": []
      },
      "type": "oci_containerengine_node_pool",
      "values": {
-      "cluster_id": "ocid1.cluster.oc1.iad.aaaaaaaazwmsedu4onn57sdunk5f2cwnr2onrvgbcc7loowjocogl637xm5q",
       "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-      "defined_tags": {
-       "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-       "Oracle-Tags.CreatedOn": "2023-04-20T11:32:49.875Z"
-      },
-      "freeform_tags": {},
-      "id": "ocid1.nodepool.oc1.iad.aaaaaaaaq5tgpnb2osioc7s3il6lsfcnto5ridkl2cpjierr5n5wyqfyfgxq",
       "initial_node_labels": [
        {
         "key": "name",
@@ -2223,53 +1997,23 @@
        }
       ],
       "kubernetes_version": "v1.25.4",
-      "lifecycle_details": null,
       "name": "k8s-node-pool",
       "node_config_details": [
        {
-        "defined_tags": {},
-        "freeform_tags": {},
-        "is_pv_encryption_in_transit_enabled": false,
-        "kms_key_id": "",
-        "node_pool_pod_network_option_details": [
-         {
-          "cni_type": "FLANNEL_OVERLAY",
-          "max_pods_per_node": 0,
-          "pod_nsg_ids": [],
-          "pod_subnet_ids": []
-         }
-        ],
-        "nsg_ids": [],
         "placement_configs": [
          {
-          "availability_domain": "PCDN:US-ASHBURN-AD-1",
-          "capacity_reservation_id": "",
-          "fault_domains": [],
-          "preemptible_node_config": [],
-          "subnet_id": "ocid1.subnet.oc1.iad.aaaaaaaatalftxvodwnyddtc5tclephdguftpaxrxtnxnk4urcxtnudre3ta"
+          "availability_domain": "PCDN:US-ASHBURN-AD-1"
          },
          {
-          "availability_domain": "PCDN:US-ASHBURN-AD-2",
-          "capacity_reservation_id": "",
-          "fault_domains": [],
-          "preemptible_node_config": [],
-          "subnet_id": "ocid1.subnet.oc1.iad.aaaaaaaatalftxvodwnyddtc5tclephdguftpaxrxtnxnk4urcxtnudre3ta"
+          "availability_domain": "PCDN:US-ASHBURN-AD-2"
          },
          {
-          "availability_domain": "PCDN:US-ASHBURN-AD-3",
-          "capacity_reservation_id": "",
-          "fault_domains": [],
-          "preemptible_node_config": [],
-          "subnet_id": "ocid1.subnet.oc1.iad.aaaaaaaatalftxvodwnyddtc5tclephdguftpaxrxtnxnk4urcxtnudre3ta"
+          "availability_domain": "PCDN:US-ASHBURN-AD-3"
          }
         ],
         "size": 2
        }
       ],
-      "node_eviction_node_pool_settings": [],
-      "node_image_id": "ocid1.image.oc1.iad.aaaaaaaartyhalkufaggccptto44jhz6mu2xihhbveu3y43agiimbndldbzq",
-      "node_image_name": "Oracle-Linux-7.9-aarch64-2023.03.28-0",
-      "node_metadata": {},
       "node_shape": "VM.Standard.A1.Flex",
       "node_shape_config": [
        {
@@ -2277,60 +2021,13 @@
         "ocpus": 1
        }
       ],
-      "node_source": [
-       {
-        "image_id": "ocid1.image.oc1.iad.aaaaaaaartyhalkufaggccptto44jhz6mu2xihhbveu3y43agiimbndldbzq",
-        "source_name": "Oracle-Linux-7.9-aarch64-2023.03.28-0",
-        "source_type": "IMAGE"
-       }
-      ],
       "node_source_details": [
        {
-        "boot_volume_size_in_gbs": "",
         "image_id": "ocid1.image.oc1.iad.aaaaaaaartyhalkufaggccptto44jhz6mu2xihhbveu3y43agiimbndldbzq",
-        "source_type": "IMAGE"
+        "source_type": "image"
        }
       ],
-      "nodes": [
-       {
-        "availability_domain": "PCDN:US-ASHBURN-AD-3",
-        "defined_tags": {},
-        "error": [],
-        "fault_domain": "FAULT-DOMAIN-1",
-        "freeform_tags": {},
-        "id": "ocid1.instance.oc1.iad.anuwcljs2322dlyc5vwdyw5l7vg6secjuk3sr66sxqkkaz53icrhfiltn3sa",
-        "kubernetes_version": "v1.25.4",
-        "lifecycle_details": "",
-        "name": "oke-cogl637xm5q-n5wyqfyfgxq-sxtnudre3ta-0",
-        "node_pool_id": "ocid1.nodepool.oc1.iad.aaaaaaaaq5tgpnb2osioc7s3il6lsfcnto5ridkl2cpjierr5n5wyqfyfgxq",
-        "private_ip": "10.0.1.181",
-        "public_ip": "",
-        "state": "ACTIVE",
-        "subnet_id": "ocid1.subnet.oc1.iad.aaaaaaaatalftxvodwnyddtc5tclephdguftpaxrxtnxnk4urcxtnudre3ta"
-       },
-       {
-        "availability_domain": "PCDN:US-ASHBURN-AD-2",
-        "defined_tags": {},
-        "error": [],
-        "fault_domain": "FAULT-DOMAIN-2",
-        "freeform_tags": {},
-        "id": "ocid1.instance.oc1.iad.anuwcljr2322dlycc5ve6pwm7dhf5i5vcnatjx7k3zxwh7s25fuhmdod3r6q",
-        "kubernetes_version": "v1.25.4",
-        "lifecycle_details": "",
-        "name": "oke-cogl637xm5q-n5wyqfyfgxq-sxtnudre3ta-1",
-        "node_pool_id": "ocid1.nodepool.oc1.iad.aaaaaaaaq5tgpnb2osioc7s3il6lsfcnto5ridkl2cpjierr5n5wyqfyfgxq",
-        "private_ip": "10.0.1.23",
-        "public_ip": "",
-        "state": "ACTIVE",
-        "subnet_id": "ocid1.subnet.oc1.iad.aaaaaaaatalftxvodwnyddtc5tclephdguftpaxrxtnxnk4urcxtnudre3ta"
-       }
-      ],
-      "quantity_per_subnet": 0,
       "ssh_public_key": "ssh_public_key=ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDlNJvDif3ixSiqrdaAiYewE3AYp5SJTFP/XGMjfir+fmfx8aeV9V4dbdOabJ68SW9Zag/puvFxRSFnpQ17FKdFxL6m96qFsYv0yd6Mh8MYx3+L0/BMoYWc3AXYWbc4Fb4HOEusvK/5JUwQTtdyOpvrHDky48+HBrV9vnX6fXmNXuoCdR7XLjq3X4/6WzCP/5OA80pG+NQHGi5/CUtPfFZFLE9Tatbr3n+BQ9aooboZs350QBOkRw/05ChumlPxmDc0Vb5CxFhjrka7sgC+XDaUizytcodoTwE5RYVZzXc50NGI6ZXRoo3hXDO0jjpIMIgkcpoiNzgo2+qhsgIFDq3b+WtWiLKbRKAAtQi8iHQkWifB8MreRvWoONt4MblF2WOQPfnpqAqVqb5YwusadVHWvxamnwGiU5M8pBrPdkU9RgG7oF5yDi8360HIaPUPuvrn2fLSI03fOqUE0mdLUPE2sD2P/abVQlbGuFk1Gqj7qXtt/oNePNeEBgBcCvNwEUc= gilby@lenovo_laptop",
-      "state": "ACTIVE",
-      "subnet_ids": [
-       "ocid1.subnet.oc1.iad.aaaaaaaatalftxvodwnyddtc5tclephdguftpaxrxtnxnk4urcxtnudre3ta"
-      ],
       "timeouts": null
      }
     },
@@ -2379,14 +2076,9 @@
      "type": "oci_core_security_list",
      "values": {
       "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-      "defined_tags": {
-       "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-       "Oracle-Tags.CreatedOn": "2023-04-20T11:21:06.188Z"
-      },
       "display_name": "k8s-private-subnet-sl",
       "egress_security_rules": [
        {
-        "description": "",
         "destination": "0.0.0.0/0",
         "destination_type": "CIDR_BLOCK",
         "icmp_options": [],
@@ -2396,11 +2088,8 @@
         "udp_options": []
        }
       ],
-      "freeform_tags": {},
-      "id": "ocid1.securitylist.oc1.iad.aaaaaaaasjbfdcxuwci34znqaerfayge4enahyl3axfa64iunh3ekaqbnwjq",
       "ingress_security_rules": [
        {
-        "description": "",
         "icmp_options": [],
         "protocol": "6",
         "source": "10.0.0.0/24",
@@ -2416,7 +2105,6 @@
         "udp_options": []
        },
        {
-        "description": "",
         "icmp_options": [],
         "protocol": "6",
         "source": "10.0.0.0/24",
@@ -2432,7 +2120,6 @@
         "udp_options": []
        },
        {
-        "description": "",
         "icmp_options": [],
         "protocol": "all",
         "source": "10.0.0.0/16",
@@ -2442,10 +2129,7 @@
         "udp_options": []
        }
       ],
-      "state": "AVAILABLE",
-      "time_created": "2023-04-20 11:21:06.419 +0000 UTC",
-      "timeouts": null,
-      "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a"
+      "timeouts": null
      }
     },
     {
@@ -2511,14 +2195,9 @@
      "type": "oci_core_security_list",
      "values": {
       "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-      "defined_tags": {
-       "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-       "Oracle-Tags.CreatedOn": "2023-04-20T11:21:06.222Z"
-      },
       "display_name": "k8s-public-subnet-sl",
       "egress_security_rules": [
        {
-        "description": "",
         "destination": "0.0.0.0/0",
         "destination_type": "CIDR_BLOCK",
         "icmp_options": [],
@@ -2528,7 +2207,6 @@
         "udp_options": []
        },
        {
-        "description": "",
         "destination": "10.0.1.0/24",
         "destination_type": "CIDR_BLOCK",
         "icmp_options": [],
@@ -2544,7 +2222,6 @@
         "udp_options": []
        },
        {
-        "description": "",
         "destination": "10.0.1.0/24",
         "destination_type": "CIDR_BLOCK",
         "icmp_options": [],
@@ -2560,11 +2237,8 @@
         "udp_options": []
        }
       ],
-      "freeform_tags": {},
-      "id": "ocid1.securitylist.oc1.iad.aaaaaaaawzkbks3zosbne5ueipfcqqbk4plcqxjfjbjzzvvs2jxw53u6hkvq",
       "ingress_security_rules": [
        {
-        "description": "",
         "icmp_options": [],
         "protocol": "6",
         "source": "0.0.0.0/0",
@@ -2580,7 +2254,6 @@
         "udp_options": []
        },
        {
-        "description": "",
         "icmp_options": [],
         "protocol": "6",
         "source": "0.0.0.0/0",
@@ -2596,7 +2269,6 @@
         "udp_options": []
        },
        {
-        "description": "",
         "icmp_options": [],
         "protocol": "all",
         "source": "10.0.0.0/16",
@@ -2606,10 +2278,7 @@
         "udp_options": []
        }
       ],
-      "state": "AVAILABLE",
-      "time_created": "2023-04-20 11:21:06.284 +0000 UTC",
-      "timeouts": null,
-      "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a"
+      "timeouts": null
      }
     },
     {
@@ -2622,40 +2291,15 @@
       "defined_tags": {},
       "freeform_tags": {},
       "ipv6cidr_blocks": [],
-      "security_list_ids": [
-       false
-      ]
+      "security_list_ids": []
      },
      "type": "oci_core_subnet",
      "values": {
-      "availability_domain": null,
       "cidr_block": "10.0.1.0/24",
       "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-      "defined_tags": {
-       "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-       "Oracle-Tags.CreatedOn": "2023-04-20T11:21:11.397Z"
-      },
-      "dhcp_options_id": "ocid1.dhcpoptions.oc1.iad.aaaaaaaadpggo7tmippv6xq7vejqdlepiz2wagxalddvj42atmimzudemnga",
       "display_name": "k8s-private-subnet",
-      "dns_label": null,
-      "freeform_tags": {},
-      "id": "ocid1.subnet.oc1.iad.aaaaaaaatalftxvodwnyddtc5tclephdguftpaxrxtnxnk4urcxtnudre3ta",
-      "ipv6cidr_block": null,
-      "ipv6cidr_blocks": [],
-      "ipv6virtual_router_ip": null,
-      "prohibit_internet_ingress": true,
       "prohibit_public_ip_on_vnic": true,
-      "route_table_id": "ocid1.routetable.oc1.iad.aaaaaaaaeqnl4gvwhvrbnu47abcz4qwjx5o7kicwtm6y4ykhq2muks7al2qa",
-      "security_list_ids": [
-       "ocid1.securitylist.oc1.iad.aaaaaaaasjbfdcxuwci34znqaerfayge4enahyl3axfa64iunh3ekaqbnwjq"
-      ],
-      "state": "AVAILABLE",
-      "subnet_domain_name": null,
-      "time_created": "2023-04-20 11:21:11.446 +0000 UTC",
-      "timeouts": null,
-      "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a",
-      "virtual_router_ip": "10.0.1.1",
-      "virtual_router_mac": "00:00:17:EB:49:50"
+      "timeouts": null
      }
     },
     {
@@ -2668,40 +2312,14 @@
       "defined_tags": {},
       "freeform_tags": {},
       "ipv6cidr_blocks": [],
-      "security_list_ids": [
-       false
-      ]
+      "security_list_ids": []
      },
      "type": "oci_core_subnet",
      "values": {
-      "availability_domain": null,
       "cidr_block": "10.0.0.0/24",
       "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-      "defined_tags": {
-       "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-       "Oracle-Tags.CreatedOn": "2023-04-20T11:21:08.677Z"
-      },
-      "dhcp_options_id": "ocid1.dhcpoptions.oc1.iad.aaaaaaaadpggo7tmippv6xq7vejqdlepiz2wagxalddvj42atmimzudemnga",
       "display_name": "k8s-public-subnet",
-      "dns_label": null,
-      "freeform_tags": {},
-      "id": "ocid1.subnet.oc1.iad.aaaaaaaaumsvv4jxaetmpqa4ak7h5uewkzkq37ayvyoknvk337a6elnmsf6q",
-      "ipv6cidr_block": null,
-      "ipv6cidr_blocks": [],
-      "ipv6virtual_router_ip": null,
-      "prohibit_internet_ingress": false,
-      "prohibit_public_ip_on_vnic": false,
-      "route_table_id": "ocid1.routetable.oc1.iad.aaaaaaaa7oxz5rcz7fjxycethp4pjliohbsj4ty5pnkx37pqmdkx3efytada",
-      "security_list_ids": [
-       "ocid1.securitylist.oc1.iad.aaaaaaaawzkbks3zosbne5ueipfcqqbk4plcqxjfjbjzzvvs2jxw53u6hkvq"
-      ],
-      "state": "AVAILABLE",
-      "subnet_domain_name": null,
-      "time_created": "2023-04-20 11:21:08.781 +0000 UTC",
-      "timeouts": null,
-      "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a",
-      "virtual_router_ip": "10.0.0.1",
-      "virtual_router_mac": "00:00:17:EB:49:50"
+      "timeouts": null
      }
     }
    ]
@@ -2711,23 +2329,6 @@
   "format_version": "1.0",
   "terraform_version": "1.4.2",
   "values": {
-   "outputs": {
-    "k8s-cluster-id": {
-     "sensitive": false,
-     "type": "string",
-     "value": "ocid1.cluster.oc1.iad.aaaaaaaazwmsedu4onn57sdunk5f2cwnr2onrvgbcc7loowjocogl637xm5q"
-    },
-    "node_pool_id": {
-     "sensitive": false,
-     "type": "string",
-     "value": "ocid1.nodepool.oc1.iad.aaaaaaaaq5tgpnb2osioc7s3il6lsfcnto5ridkl2cpjierr5n5wyqfyfgxq"
-    },
-    "public_subnet_id": {
-     "sensitive": false,
-     "type": "string",
-     "value": "ocid1.subnet.oc1.iad.aaaaaaaaumsvv4jxaetmpqa4ak7h5uewkzkq37ayvyoknvk337a6elnmsf6q"
-    }
-   },
    "root_module": {
     "child_modules": [
      {
@@ -2772,317 +2373,6 @@
            "name": "All IAD Services In Oracle Services Network"
           }
          ]
-        }
-       },
-       {
-        "address": "module.vcn.oci_core_default_security_list.lockdown[0]",
-        "depends_on": [
-         "module.vcn.oci_core_vcn.vcn"
-        ],
-        "index": 0,
-        "mode": "managed",
-        "name": "lockdown",
-        "provider_name": "registry.terraform.io/hashicorp/oci",
-        "schema_version": 0,
-        "sensitive_values": {
-         "defined_tags": {},
-         "egress_security_rules": [],
-         "freeform_tags": {},
-         "ingress_security_rules": []
-        },
-        "type": "oci_core_default_security_list",
-        "values": {
-         "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-         "defined_tags": {
-          "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-          "Oracle-Tags.CreatedOn": "2023-04-20T11:21:01.400Z"
-         },
-         "display_name": "Default Security List for k8s-vcn",
-         "egress_security_rules": [],
-         "freeform_tags": {
-          "module": "oracle-terraform-modules/vcn/oci",
-          "terraformed": "Please do not edit manually"
-         },
-         "id": "ocid1.securitylist.oc1.iad.aaaaaaaaiarlfgnrfsyka7u5ihdnpvr4tlro3rwoevu5dmae5op2gsdustha",
-         "ingress_security_rules": [],
-         "manage_default_resource_id": "ocid1.securitylist.oc1.iad.aaaaaaaaiarlfgnrfsyka7u5ihdnpvr4tlro3rwoevu5dmae5op2gsdustha",
-         "state": "AVAILABLE",
-         "time_created": "2023-04-20 11:21:01.717 +0000 UTC",
-         "timeouts": null
-        }
-       },
-       {
-        "address": "module.vcn.oci_core_internet_gateway.ig[0]",
-        "depends_on": [
-         "module.vcn.oci_core_vcn.vcn"
-        ],
-        "index": 0,
-        "mode": "managed",
-        "name": "ig",
-        "provider_name": "registry.terraform.io/hashicorp/oci",
-        "schema_version": 0,
-        "sensitive_values": {
-         "defined_tags": {},
-         "freeform_tags": {}
-        },
-        "type": "oci_core_internet_gateway",
-        "values": {
-         "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-         "defined_tags": {
-          "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-          "Oracle-Tags.CreatedOn": "2023-04-20T11:21:06.268Z"
-         },
-         "display_name": "internet-gateway",
-         "enabled": true,
-         "freeform_tags": {
-          "module": "oracle-terraform-modules/vcn/oci",
-          "terraformed": "Please do not edit manually"
-         },
-         "id": "ocid1.internetgateway.oc1.iad.aaaaaaaarazkzf6xjapifjjhnnxc3dmwsrm5aq3mzmvs5msv4fvaqgu5rida",
-         "route_table_id": null,
-         "state": "AVAILABLE",
-         "time_created": "2023-04-20 11:21:06.353 +0000 UTC",
-         "timeouts": null,
-         "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a"
-        }
-       },
-       {
-        "address": "module.vcn.oci_core_nat_gateway.nat_gateway[0]",
-        "depends_on": [
-         "module.vcn.oci_core_vcn.vcn"
-        ],
-        "index": 0,
-        "mode": "managed",
-        "name": "nat_gateway",
-        "provider_name": "registry.terraform.io/hashicorp/oci",
-        "schema_version": 0,
-        "sensitive_values": {
-         "defined_tags": {},
-         "freeform_tags": {}
-        },
-        "type": "oci_core_nat_gateway",
-        "values": {
-         "block_traffic": false,
-         "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-         "defined_tags": {
-          "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-          "Oracle-Tags.CreatedOn": "2023-04-20T11:21:05.886Z"
-         },
-         "display_name": "nat-gateway",
-         "freeform_tags": {
-          "module": "oracle-terraform-modules/vcn/oci",
-          "terraformed": "Please do not edit manually"
-         },
-         "id": "ocid1.natgateway.oc1.iad.aaaaaaaa5wyuko47x2fpo6ylhnz42nhagzklharwenmvyo26knjbsp6w46gq",
-         "nat_ip": "129.80.173.126",
-         "public_ip_id": "ocid1.publicip.oc1.iad.aaaaaaaatz6mzcbze2dethmzb6ybvhbugnfuydyekkotzslfb5ndd6wdr7vq",
-         "route_table_id": null,
-         "state": "AVAILABLE",
-         "time_created": "2023-04-20 11:21:06.35 +0000 UTC",
-         "timeouts": null,
-         "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a"
-        }
-       },
-       {
-        "address": "module.vcn.oci_core_route_table.ig[0]",
-        "depends_on": [
-         "module.vcn.module.drg_from_vcn_module.oci_core_drg.drg",
-         "module.vcn.oci_core_internet_gateway.ig",
-         "module.vcn.oci_core_vcn.vcn"
-        ],
-        "index": 0,
-        "mode": "managed",
-        "name": "ig",
-        "provider_name": "registry.terraform.io/hashicorp/oci",
-        "schema_version": 0,
-        "sensitive_values": {
-         "defined_tags": {},
-         "freeform_tags": {},
-         "route_rules": [
-          {}
-         ]
-        },
-        "type": "oci_core_route_table",
-        "values": {
-         "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-         "defined_tags": {
-          "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-          "Oracle-Tags.CreatedOn": "2023-04-20T11:21:07.244Z"
-         },
-         "display_name": "internet-route",
-         "freeform_tags": {
-          "module": "oracle-terraform-modules/vcn/oci",
-          "terraformed": "Please do not edit manually"
-         },
-         "id": "ocid1.routetable.oc1.iad.aaaaaaaa7oxz5rcz7fjxycethp4pjliohbsj4ty5pnkx37pqmdkx3efytada",
-         "route_rules": [
-          {
-           "cidr_block": "",
-           "description": "Terraformed - Auto-generated at Internet Gateway creation: Internet Gateway as default gateway",
-           "destination": "0.0.0.0/0",
-           "destination_type": "CIDR_BLOCK",
-           "network_entity_id": "ocid1.internetgateway.oc1.iad.aaaaaaaarazkzf6xjapifjjhnnxc3dmwsrm5aq3mzmvs5msv4fvaqgu5rida",
-           "route_type": ""
-          }
-         ],
-         "state": "AVAILABLE",
-         "time_created": "2023-04-20 11:21:07.268 +0000 UTC",
-         "timeouts": null,
-         "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a"
-        }
-       },
-       {
-        "address": "module.vcn.oci_core_route_table.nat[0]",
-        "depends_on": [
-         "module.vcn.data.oci_core_services.all_oci_services",
-         "module.vcn.module.drg_from_vcn_module.oci_core_drg.drg",
-         "module.vcn.oci_core_nat_gateway.nat_gateway",
-         "module.vcn.oci_core_service_gateway.service_gateway",
-         "module.vcn.oci_core_vcn.vcn"
-        ],
-        "index": 0,
-        "mode": "managed",
-        "name": "nat",
-        "provider_name": "registry.terraform.io/hashicorp/oci",
-        "schema_version": 0,
-        "sensitive_values": {
-         "defined_tags": {},
-         "freeform_tags": {},
-         "route_rules": [
-          {},
-          {}
-         ]
-        },
-        "type": "oci_core_route_table",
-        "values": {
-         "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-         "defined_tags": {
-          "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-          "Oracle-Tags.CreatedOn": "2023-04-20T11:21:08.931Z"
-         },
-         "display_name": "nat-route",
-         "freeform_tags": {
-          "module": "oracle-terraform-modules/vcn/oci",
-          "terraformed": "Please do not edit manually"
-         },
-         "id": "ocid1.routetable.oc1.iad.aaaaaaaaeqnl4gvwhvrbnu47abcz4qwjx5o7kicwtm6y4ykhq2muks7al2qa",
-         "route_rules": [
-          {
-           "cidr_block": "",
-           "description": "Terraformed - Auto-generated at NAT Gateway creation: NAT Gateway as default gateway",
-           "destination": "0.0.0.0/0",
-           "destination_type": "CIDR_BLOCK",
-           "network_entity_id": "ocid1.natgateway.oc1.iad.aaaaaaaa5wyuko47x2fpo6ylhnz42nhagzklharwenmvyo26knjbsp6w46gq",
-           "route_type": ""
-          },
-          {
-           "cidr_block": "",
-           "description": "Terraformed - Auto-generated at Service Gateway creation: All Services in region to Service Gateway",
-           "destination": "all-iad-services-in-oracle-services-network",
-           "destination_type": "SERVICE_CIDR_BLOCK",
-           "network_entity_id": "ocid1.servicegateway.oc1.iad.aaaaaaaa254mwjk4dnx3f7qkyd4belhpsbbcv4a4htsfitskrvsh57abucxa",
-           "route_type": ""
-          }
-         ],
-         "state": "AVAILABLE",
-         "time_created": "2023-04-20 11:21:09.021 +0000 UTC",
-         "timeouts": null,
-         "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a"
-        }
-       },
-       {
-        "address": "module.vcn.oci_core_service_gateway.service_gateway[0]",
-        "depends_on": [
-         "module.vcn.data.oci_core_services.all_oci_services",
-         "module.vcn.oci_core_vcn.vcn"
-        ],
-        "index": 0,
-        "mode": "managed",
-        "name": "service_gateway",
-        "provider_name": "registry.terraform.io/hashicorp/oci",
-        "schema_version": 0,
-        "sensitive_values": {
-         "defined_tags": {},
-         "freeform_tags": {},
-         "services": [
-          {}
-         ]
-        },
-        "type": "oci_core_service_gateway",
-        "values": {
-         "block_traffic": false,
-         "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-         "defined_tags": {
-          "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-          "Oracle-Tags.CreatedOn": "2023-04-20T11:21:06.211Z"
-         },
-         "display_name": "service-gateway",
-         "freeform_tags": {
-          "module": "oracle-terraform-modules/vcn/oci",
-          "terraformed": "Please do not edit manually"
-         },
-         "id": "ocid1.servicegateway.oc1.iad.aaaaaaaa254mwjk4dnx3f7qkyd4belhpsbbcv4a4htsfitskrvsh57abucxa",
-         "route_table_id": null,
-         "services": [
-          {
-           "service_id": "ocid1.service.oc1.iad.aaaaaaaam4zfmy2rjue6fmglumm3czgisxzrnvrwqeodtztg7hwa272mlfna",
-           "service_name": "All IAD Services In Oracle Services Network"
-          }
-         ],
-         "state": "AVAILABLE",
-         "time_created": "2023-04-20 11:21:07.152 +0000 UTC",
-         "timeouts": null,
-         "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a"
-        }
-       },
-       {
-        "address": "module.vcn.oci_core_vcn.vcn",
-        "mode": "managed",
-        "name": "vcn",
-        "provider_name": "registry.terraform.io/hashicorp/oci",
-        "schema_version": 0,
-        "sensitive_values": {
-         "byoipv6cidr_blocks": [],
-         "byoipv6cidr_details": [],
-         "cidr_blocks": [
-          false
-         ],
-         "defined_tags": {},
-         "freeform_tags": {},
-         "ipv6cidr_blocks": [],
-         "ipv6private_cidr_blocks": []
-        },
-        "type": "oci_core_vcn",
-        "values": {
-         "byoipv6cidr_blocks": [],
-         "byoipv6cidr_details": [],
-         "cidr_block": "10.0.0.0/16",
-         "cidr_blocks": [
-          "10.0.0.0/16"
-         ],
-         "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-         "default_dhcp_options_id": "ocid1.dhcpoptions.oc1.iad.aaaaaaaadpggo7tmippv6xq7vejqdlepiz2wagxalddvj42atmimzudemnga",
-         "default_route_table_id": "ocid1.routetable.oc1.iad.aaaaaaaazdgsqvolougnrttxfaewssbm4bx4qiseh77ms6rwvcngyfjhvbua",
-         "default_security_list_id": "ocid1.securitylist.oc1.iad.aaaaaaaaiarlfgnrfsyka7u5ihdnpvr4tlro3rwoevu5dmae5op2gsdustha",
-         "defined_tags": {
-          "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-          "Oracle-Tags.CreatedOn": "2023-04-20T11:21:01.400Z"
-         },
-         "display_name": "k8s-vcn",
-         "dns_label": "k8svcn",
-         "freeform_tags": {
-          "module": "oracle-terraform-modules/vcn/oci",
-          "terraformed": "Please do not edit manually"
-         },
-         "id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a",
-         "ipv6cidr_blocks": [],
-         "ipv6private_cidr_blocks": [],
-         "is_ipv6enabled": false,
-         "is_oracle_gua_allocation_enabled": null,
-         "state": "AVAILABLE",
-         "time_created": "2023-04-20 11:21:01.717 +0000 UTC",
-         "timeouts": null,
-         "vcn_domain_name": "k8svcn.oraclevcn.com"
         }
        }
       ]
@@ -3283,798 +2573,6 @@
        "filter": null,
        "id": "IdentityAvailabilityDomainsDataSource-1795830124"
       }
-     },
-     {
-      "address": "oci_artifacts_container_repository.docker_repo",
-      "mode": "managed",
-      "name": "docker_repo",
-      "provider_name": "registry.terraform.io/hashicorp/oci",
-      "schema_version": 0,
-      "sensitive_values": {
-       "readme": []
-      },
-      "type": "oci_artifacts_container_repository",
-      "values": {
-       "billable_size_in_gbs": "0",
-       "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-       "created_by": "ocid1.user.oc1..aaaaaaaa34q5m5rhn2i3o6g7ufvdv7lornxxln65h4cljz4rlxxtvdnqeerq",
-       "display_name": "kubernetes-nginx",
-       "id": "ocid1.containerrepo.oc1.iad.0.idxfqxqnytht.aaaaaaaaveoc3axa5cpyffvto73lyseauue4o47msvehl5vjfbtga3s5nnxa",
-       "image_count": 0,
-       "is_immutable": false,
-       "is_public": false,
-       "layer_count": 0,
-       "layers_size_in_bytes": "0",
-       "readme": [],
-       "state": "AVAILABLE",
-       "time_created": "2023-04-20 11:21:01.521 +0000 UTC",
-       "time_last_pushed": null,
-       "timeouts": null
-      }
-     },
-     {
-      "address": "oci_containerengine_cluster.k8s_cluster",
-      "depends_on": [
-       "module.vcn.module.drg_from_vcn_module.oci_core_drg.drg",
-       "module.vcn.oci_core_internet_gateway.ig",
-       "module.vcn.oci_core_route_table.ig",
-       "module.vcn.oci_core_vcn.vcn",
-       "oci_core_security_list.public_subnet_sl",
-       "oci_core_subnet.vcn_public_subnet"
-      ],
-      "mode": "managed",
-      "name": "k8s_cluster",
-      "provider_name": "registry.terraform.io/hashicorp/oci",
-      "schema_version": 0,
-      "sensitive_values": {
-       "available_kubernetes_upgrades": [],
-       "cluster_pod_network_options": [
-        {}
-       ],
-       "defined_tags": {},
-       "endpoint_config": [
-        {
-         "nsg_ids": []
-        }
-       ],
-       "endpoints": [
-        {}
-       ],
-       "freeform_tags": {},
-       "image_policy_config": [
-        {
-         "key_details": []
-        }
-       ],
-       "metadata": [
-        {}
-       ],
-       "options": [
-        {
-         "add_ons": [
-          {}
-         ],
-         "admission_controller_options": [
-          {}
-         ],
-         "kubernetes_network_config": [
-          {}
-         ],
-         "persistent_volume_config": [
-          {
-           "defined_tags": {},
-           "freeform_tags": {}
-          }
-         ],
-         "service_lb_config": [
-          {
-           "defined_tags": {},
-           "freeform_tags": {}
-          }
-         ],
-         "service_lb_subnet_ids": [
-          false
-         ]
-        }
-       ]
-      },
-      "type": "oci_containerengine_cluster",
-      "values": {
-       "available_kubernetes_upgrades": [],
-       "cluster_pod_network_options": [
-        {
-         "cni_type": "FLANNEL_OVERLAY"
-        }
-       ],
-       "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-       "defined_tags": {
-        "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-        "Oracle-Tags.CreatedOn": "2023-04-20T11:21:12.575Z"
-       },
-       "endpoint_config": [
-        {
-         "is_public_ip_enabled": true,
-         "nsg_ids": [],
-         "subnet_id": "ocid1.subnet.oc1.iad.aaaaaaaaumsvv4jxaetmpqa4ak7h5uewkzkq37ayvyoknvk337a6elnmsf6q"
-        }
-       ],
-       "endpoints": [
-        {
-         "kubernetes": "",
-         "private_endpoint": "10.0.0.246:6443",
-         "public_endpoint": "129.80.195.209:6443",
-         "vcn_hostname_endpoint": ""
-        }
-       ],
-       "freeform_tags": {},
-       "id": "ocid1.cluster.oc1.iad.aaaaaaaazwmsedu4onn57sdunk5f2cwnr2onrvgbcc7loowjocogl637xm5q",
-       "image_policy_config": [
-        {
-         "is_policy_enabled": false,
-         "key_details": []
-        }
-       ],
-       "kms_key_id": null,
-       "kubernetes_version": "v1.25.4",
-       "lifecycle_details": null,
-       "metadata": [
-        {
-         "created_by_user_id": "ocid1.user.oc1..aaaaaaaa34q5m5rhn2i3o6g7ufvdv7lornxxln65h4cljz4rlxxtvdnqeerq",
-         "created_by_work_request_id": "ocid1.clustersworkrequest.oc1.iad.aaaaaaaa37aozq6v5pq2rrl2mqleqmtwg66hnyi7k67jsqneuwhkrsglk6ea",
-         "deleted_by_user_id": "",
-         "deleted_by_work_request_id": "",
-         "time_created": "2023-04-20 11:21:14 +0000 UTC",
-         "time_deleted": "",
-         "time_updated": "",
-         "updated_by_user_id": "",
-         "updated_by_work_request_id": ""
-        }
-       ],
-       "name": "k8s-cluster",
-       "options": [
-        {
-         "add_ons": [
-          {
-           "is_kubernetes_dashboard_enabled": false,
-           "is_tiller_enabled": false
-          }
-         ],
-         "admission_controller_options": [
-          {
-           "is_pod_security_policy_enabled": false
-          }
-         ],
-         "kubernetes_network_config": [
-          {
-           "pods_cidr": "10.244.0.0/16",
-           "services_cidr": "10.96.0.0/16"
-          }
-         ],
-         "persistent_volume_config": [
-          {
-           "defined_tags": {},
-           "freeform_tags": {}
-          }
-         ],
-         "service_lb_config": [
-          {
-           "defined_tags": {},
-           "freeform_tags": {}
-          }
-         ],
-         "service_lb_subnet_ids": [
-          "ocid1.subnet.oc1.iad.aaaaaaaaumsvv4jxaetmpqa4ak7h5uewkzkq37ayvyoknvk337a6elnmsf6q"
-         ]
-        }
-       ],
-       "state": "ACTIVE",
-       "timeouts": null,
-       "type": "BASIC_CLUSTER",
-       "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a"
-      }
-     },
-     {
-      "address": "oci_containerengine_node_pool.k8s_node_pool",
-      "depends_on": [
-       "data.oci_core_images.latest_image",
-       "data.oci_identity_availability_domains.ads",
-       "module.vcn.data.oci_core_services.all_oci_services",
-       "module.vcn.module.drg_from_vcn_module.oci_core_drg.drg",
-       "module.vcn.oci_core_internet_gateway.ig",
-       "module.vcn.oci_core_nat_gateway.nat_gateway",
-       "module.vcn.oci_core_route_table.ig",
-       "module.vcn.oci_core_route_table.nat",
-       "module.vcn.oci_core_service_gateway.service_gateway",
-       "module.vcn.oci_core_vcn.vcn",
-       "oci_containerengine_cluster.k8s_cluster",
-       "oci_core_security_list.private_subnet_sl",
-       "oci_core_security_list.public_subnet_sl",
-       "oci_core_subnet.vcn_private_subnet",
-       "oci_core_subnet.vcn_public_subnet"
-      ],
-      "mode": "managed",
-      "name": "k8s_node_pool",
-      "provider_name": "registry.terraform.io/hashicorp/oci",
-      "schema_version": 0,
-      "sensitive_values": {
-       "defined_tags": {},
-       "freeform_tags": {},
-       "initial_node_labels": [
-        {}
-       ],
-       "node_config_details": [
-        {
-         "defined_tags": {},
-         "freeform_tags": {},
-         "node_pool_pod_network_option_details": [
-          {
-           "pod_nsg_ids": [],
-           "pod_subnet_ids": []
-          }
-         ],
-         "nsg_ids": [],
-         "placement_configs": [
-          {
-           "fault_domains": [],
-           "preemptible_node_config": []
-          },
-          {
-           "fault_domains": [],
-           "preemptible_node_config": []
-          },
-          {
-           "fault_domains": [],
-           "preemptible_node_config": []
-          }
-         ]
-        }
-       ],
-       "node_eviction_node_pool_settings": [],
-       "node_metadata": {},
-       "node_shape_config": [
-        {}
-       ],
-       "node_source": [
-        {}
-       ],
-       "node_source_details": [
-        {}
-       ],
-       "nodes": [
-        {
-         "defined_tags": {},
-         "error": [],
-         "freeform_tags": {}
-        },
-        {
-         "defined_tags": {},
-         "error": [],
-         "freeform_tags": {}
-        }
-       ],
-       "subnet_ids": [
-        false
-       ]
-      },
-      "type": "oci_containerengine_node_pool",
-      "values": {
-       "cluster_id": "ocid1.cluster.oc1.iad.aaaaaaaazwmsedu4onn57sdunk5f2cwnr2onrvgbcc7loowjocogl637xm5q",
-       "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-       "defined_tags": {
-        "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-        "Oracle-Tags.CreatedOn": "2023-04-20T11:32:49.875Z"
-       },
-       "freeform_tags": {},
-       "id": "ocid1.nodepool.oc1.iad.aaaaaaaaq5tgpnb2osioc7s3il6lsfcnto5ridkl2cpjierr5n5wyqfyfgxq",
-       "initial_node_labels": [
-        {
-         "key": "name",
-         "value": "k8s-cluster"
-        }
-       ],
-       "kubernetes_version": "v1.25.4",
-       "lifecycle_details": null,
-       "name": "k8s-node-pool",
-       "node_config_details": [
-        {
-         "defined_tags": {},
-         "freeform_tags": {},
-         "is_pv_encryption_in_transit_enabled": false,
-         "kms_key_id": "",
-         "node_pool_pod_network_option_details": [
-          {
-           "cni_type": "FLANNEL_OVERLAY",
-           "max_pods_per_node": 0,
-           "pod_nsg_ids": [],
-           "pod_subnet_ids": []
-          }
-         ],
-         "nsg_ids": [],
-         "placement_configs": [
-          {
-           "availability_domain": "PCDN:US-ASHBURN-AD-1",
-           "capacity_reservation_id": "",
-           "fault_domains": [],
-           "preemptible_node_config": [],
-           "subnet_id": "ocid1.subnet.oc1.iad.aaaaaaaatalftxvodwnyddtc5tclephdguftpaxrxtnxnk4urcxtnudre3ta"
-          },
-          {
-           "availability_domain": "PCDN:US-ASHBURN-AD-2",
-           "capacity_reservation_id": "",
-           "fault_domains": [],
-           "preemptible_node_config": [],
-           "subnet_id": "ocid1.subnet.oc1.iad.aaaaaaaatalftxvodwnyddtc5tclephdguftpaxrxtnxnk4urcxtnudre3ta"
-          },
-          {
-           "availability_domain": "PCDN:US-ASHBURN-AD-3",
-           "capacity_reservation_id": "",
-           "fault_domains": [],
-           "preemptible_node_config": [],
-           "subnet_id": "ocid1.subnet.oc1.iad.aaaaaaaatalftxvodwnyddtc5tclephdguftpaxrxtnxnk4urcxtnudre3ta"
-          }
-         ],
-         "size": 2
-        }
-       ],
-       "node_eviction_node_pool_settings": [],
-       "node_image_id": "ocid1.image.oc1.iad.aaaaaaaartyhalkufaggccptto44jhz6mu2xihhbveu3y43agiimbndldbzq",
-       "node_image_name": "Oracle-Linux-7.9-aarch64-2023.03.28-0",
-       "node_metadata": {},
-       "node_shape": "VM.Standard.A1.Flex",
-       "node_shape_config": [
-        {
-         "memory_in_gbs": 6,
-         "ocpus": 1
-        }
-       ],
-       "node_source": [
-        {
-         "image_id": "ocid1.image.oc1.iad.aaaaaaaartyhalkufaggccptto44jhz6mu2xihhbveu3y43agiimbndldbzq",
-         "source_name": "Oracle-Linux-7.9-aarch64-2023.03.28-0",
-         "source_type": "IMAGE"
-        }
-       ],
-       "node_source_details": [
-        {
-         "boot_volume_size_in_gbs": "",
-         "image_id": "ocid1.image.oc1.iad.aaaaaaaartyhalkufaggccptto44jhz6mu2xihhbveu3y43agiimbndldbzq",
-         "source_type": "IMAGE"
-        }
-       ],
-       "nodes": [
-        {
-         "availability_domain": "PCDN:US-ASHBURN-AD-3",
-         "defined_tags": {},
-         "error": [],
-         "fault_domain": "FAULT-DOMAIN-1",
-         "freeform_tags": {},
-         "id": "ocid1.instance.oc1.iad.anuwcljs2322dlyc5vwdyw5l7vg6secjuk3sr66sxqkkaz53icrhfiltn3sa",
-         "kubernetes_version": "v1.25.4",
-         "lifecycle_details": "",
-         "name": "oke-cogl637xm5q-n5wyqfyfgxq-sxtnudre3ta-0",
-         "node_pool_id": "ocid1.nodepool.oc1.iad.aaaaaaaaq5tgpnb2osioc7s3il6lsfcnto5ridkl2cpjierr5n5wyqfyfgxq",
-         "private_ip": "10.0.1.181",
-         "public_ip": "",
-         "state": "ACTIVE",
-         "subnet_id": "ocid1.subnet.oc1.iad.aaaaaaaatalftxvodwnyddtc5tclephdguftpaxrxtnxnk4urcxtnudre3ta"
-        },
-        {
-         "availability_domain": "PCDN:US-ASHBURN-AD-2",
-         "defined_tags": {},
-         "error": [],
-         "fault_domain": "FAULT-DOMAIN-2",
-         "freeform_tags": {},
-         "id": "ocid1.instance.oc1.iad.anuwcljr2322dlycc5ve6pwm7dhf5i5vcnatjx7k3zxwh7s25fuhmdod3r6q",
-         "kubernetes_version": "v1.25.4",
-         "lifecycle_details": "",
-         "name": "oke-cogl637xm5q-n5wyqfyfgxq-sxtnudre3ta-1",
-         "node_pool_id": "ocid1.nodepool.oc1.iad.aaaaaaaaq5tgpnb2osioc7s3il6lsfcnto5ridkl2cpjierr5n5wyqfyfgxq",
-         "private_ip": "10.0.1.23",
-         "public_ip": "",
-         "state": "ACTIVE",
-         "subnet_id": "ocid1.subnet.oc1.iad.aaaaaaaatalftxvodwnyddtc5tclephdguftpaxrxtnxnk4urcxtnudre3ta"
-        }
-       ],
-       "quantity_per_subnet": 0,
-       "ssh_public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDlNJvDif3ixSiqrdaAiYewE3AYp5SJTFP/XGMjfir+fmfx8aeV9V4dbdOabJ68SW9Zag/puvFxRSFnpQ17FKdFxL6m96qFsYv0yd6Mh8MYx3+L0/BMoYWc3AXYWbc4Fb4HOEusvK/5JUwQTtdyOpvrHDky48+HBrV9vnX6fXmNXuoCdR7XLjq3X4/6WzCP/5OA80pG+NQHGi5/CUtPfFZFLE9Tatbr3n+BQ9aooboZs350QBOkRw/05ChumlPxmDc0Vb5CxFhjrka7sgC+XDaUizytcodoTwE5RYVZzXc50NGI6ZXRoo3hXDO0jjpIMIgkcpoiNzgo2+qhsgIFDq3b+WtWiLKbRKAAtQi8iHQkWifB8MreRvWoONt4MblF2WOQPfnpqAqVqb5YwusadVHWvxamnwGiU5M8pBrPdkU9RgG7oF5yDi8360HIaPUPuvrn2fLSI03fOqUE0mdLUPE2sD2P/abVQlbGuFk1Gqj7qXtt/oNePNeEBgBcCvNwEUc= gilby@lenovo_laptop",
-       "state": "ACTIVE",
-       "subnet_ids": [
-        "ocid1.subnet.oc1.iad.aaaaaaaatalftxvodwnyddtc5tclephdguftpaxrxtnxnk4urcxtnudre3ta"
-       ],
-       "timeouts": null
-      }
-     },
-     {
-      "address": "oci_core_security_list.private_subnet_sl",
-      "depends_on": [
-       "module.vcn.oci_core_vcn.vcn"
-      ],
-      "mode": "managed",
-      "name": "private_subnet_sl",
-      "provider_name": "registry.terraform.io/hashicorp/oci",
-      "schema_version": 0,
-      "sensitive_values": {
-       "defined_tags": {},
-       "egress_security_rules": [
-        {
-         "icmp_options": [],
-         "tcp_options": [],
-         "udp_options": []
-        }
-       ],
-       "freeform_tags": {},
-       "ingress_security_rules": [
-        {
-         "icmp_options": [],
-         "tcp_options": [
-          {
-           "source_port_range": []
-          }
-         ],
-         "udp_options": []
-        },
-        {
-         "icmp_options": [],
-         "tcp_options": [
-          {
-           "source_port_range": []
-          }
-         ],
-         "udp_options": []
-        },
-        {
-         "icmp_options": [],
-         "tcp_options": [],
-         "udp_options": []
-        }
-       ]
-      },
-      "type": "oci_core_security_list",
-      "values": {
-       "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-       "defined_tags": {
-        "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-        "Oracle-Tags.CreatedOn": "2023-04-20T11:21:06.188Z"
-       },
-       "display_name": "k8s-private-subnet-sl",
-       "egress_security_rules": [
-        {
-         "description": "",
-         "destination": "0.0.0.0/0",
-         "destination_type": "CIDR_BLOCK",
-         "icmp_options": [],
-         "protocol": "all",
-         "stateless": false,
-         "tcp_options": [],
-         "udp_options": []
-        }
-       ],
-       "freeform_tags": {},
-       "id": "ocid1.securitylist.oc1.iad.aaaaaaaasjbfdcxuwci34znqaerfayge4enahyl3axfa64iunh3ekaqbnwjq",
-       "ingress_security_rules": [
-        {
-         "description": "",
-         "icmp_options": [],
-         "protocol": "6",
-         "source": "10.0.0.0/24",
-         "source_type": "CIDR_BLOCK",
-         "stateless": false,
-         "tcp_options": [
-          {
-           "max": 10256,
-           "min": 10256,
-           "source_port_range": []
-          }
-         ],
-         "udp_options": []
-        },
-        {
-         "description": "",
-         "icmp_options": [],
-         "protocol": "6",
-         "source": "10.0.0.0/24",
-         "source_type": "CIDR_BLOCK",
-         "stateless": false,
-         "tcp_options": [
-          {
-           "max": 31600,
-           "min": 31600,
-           "source_port_range": []
-          }
-         ],
-         "udp_options": []
-        },
-        {
-         "description": "",
-         "icmp_options": [],
-         "protocol": "all",
-         "source": "10.0.0.0/16",
-         "source_type": "CIDR_BLOCK",
-         "stateless": false,
-         "tcp_options": [],
-         "udp_options": []
-        }
-       ],
-       "state": "AVAILABLE",
-       "time_created": "2023-04-20 11:21:06.419 +0000 UTC",
-       "timeouts": null,
-       "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a"
-      }
-     },
-     {
-      "address": "oci_core_security_list.public_subnet_sl",
-      "depends_on": [
-       "module.vcn.oci_core_vcn.vcn"
-      ],
-      "mode": "managed",
-      "name": "public_subnet_sl",
-      "provider_name": "registry.terraform.io/hashicorp/oci",
-      "schema_version": 0,
-      "sensitive_values": {
-       "defined_tags": {},
-       "egress_security_rules": [
-        {
-         "icmp_options": [],
-         "tcp_options": [],
-         "udp_options": []
-        },
-        {
-         "icmp_options": [],
-         "tcp_options": [
-          {
-           "source_port_range": []
-          }
-         ],
-         "udp_options": []
-        },
-        {
-         "icmp_options": [],
-         "tcp_options": [
-          {
-           "source_port_range": []
-          }
-         ],
-         "udp_options": []
-        }
-       ],
-       "freeform_tags": {},
-       "ingress_security_rules": [
-        {
-         "icmp_options": [],
-         "tcp_options": [
-          {
-           "source_port_range": []
-          }
-         ],
-         "udp_options": []
-        },
-        {
-         "icmp_options": [],
-         "tcp_options": [
-          {
-           "source_port_range": []
-          }
-         ],
-         "udp_options": []
-        },
-        {
-         "icmp_options": [],
-         "tcp_options": [],
-         "udp_options": []
-        }
-       ]
-      },
-      "type": "oci_core_security_list",
-      "values": {
-       "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-       "defined_tags": {
-        "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-        "Oracle-Tags.CreatedOn": "2023-04-20T11:21:06.222Z"
-       },
-       "display_name": "k8s-public-subnet-sl",
-       "egress_security_rules": [
-        {
-         "description": "",
-         "destination": "0.0.0.0/0",
-         "destination_type": "CIDR_BLOCK",
-         "icmp_options": [],
-         "protocol": "all",
-         "stateless": false,
-         "tcp_options": [],
-         "udp_options": []
-        },
-        {
-         "description": "",
-         "destination": "10.0.1.0/24",
-         "destination_type": "CIDR_BLOCK",
-         "icmp_options": [],
-         "protocol": "6",
-         "stateless": false,
-         "tcp_options": [
-          {
-           "max": 10256,
-           "min": 10256,
-           "source_port_range": []
-          }
-         ],
-         "udp_options": []
-        },
-        {
-         "description": "",
-         "destination": "10.0.1.0/24",
-         "destination_type": "CIDR_BLOCK",
-         "icmp_options": [],
-         "protocol": "6",
-         "stateless": false,
-         "tcp_options": [
-          {
-           "max": 31600,
-           "min": 31600,
-           "source_port_range": []
-          }
-         ],
-         "udp_options": []
-        }
-       ],
-       "freeform_tags": {},
-       "id": "ocid1.securitylist.oc1.iad.aaaaaaaawzkbks3zosbne5ueipfcqqbk4plcqxjfjbjzzvvs2jxw53u6hkvq",
-       "ingress_security_rules": [
-        {
-         "description": "",
-         "icmp_options": [],
-         "protocol": "6",
-         "source": "0.0.0.0/0",
-         "source_type": "CIDR_BLOCK",
-         "stateless": false,
-         "tcp_options": [
-          {
-           "max": 6443,
-           "min": 6443,
-           "source_port_range": []
-          }
-         ],
-         "udp_options": []
-        },
-        {
-         "description": "",
-         "icmp_options": [],
-         "protocol": "6",
-         "source": "0.0.0.0/0",
-         "source_type": "CIDR_BLOCK",
-         "stateless": false,
-         "tcp_options": [
-          {
-           "max": 80,
-           "min": 80,
-           "source_port_range": []
-          }
-         ],
-         "udp_options": []
-        },
-        {
-         "description": "",
-         "icmp_options": [],
-         "protocol": "all",
-         "source": "10.0.0.0/16",
-         "source_type": "CIDR_BLOCK",
-         "stateless": false,
-         "tcp_options": [],
-         "udp_options": []
-        }
-       ],
-       "state": "AVAILABLE",
-       "time_created": "2023-04-20 11:21:06.284 +0000 UTC",
-       "timeouts": null,
-       "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a"
-      }
-     },
-     {
-      "address": "oci_core_subnet.vcn_private_subnet",
-      "depends_on": [
-       "module.vcn.data.oci_core_services.all_oci_services",
-       "module.vcn.module.drg_from_vcn_module.oci_core_drg.drg",
-       "module.vcn.oci_core_nat_gateway.nat_gateway",
-       "module.vcn.oci_core_route_table.nat",
-       "module.vcn.oci_core_service_gateway.service_gateway",
-       "module.vcn.oci_core_vcn.vcn",
-       "oci_core_security_list.private_subnet_sl"
-      ],
-      "mode": "managed",
-      "name": "vcn_private_subnet",
-      "provider_name": "registry.terraform.io/hashicorp/oci",
-      "schema_version": 0,
-      "sensitive_values": {
-       "defined_tags": {},
-       "freeform_tags": {},
-       "ipv6cidr_blocks": [],
-       "security_list_ids": [
-        false
-       ]
-      },
-      "type": "oci_core_subnet",
-      "values": {
-       "availability_domain": null,
-       "cidr_block": "10.0.1.0/24",
-       "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-       "defined_tags": {
-        "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-        "Oracle-Tags.CreatedOn": "2023-04-20T11:21:11.397Z"
-       },
-       "dhcp_options_id": "ocid1.dhcpoptions.oc1.iad.aaaaaaaadpggo7tmippv6xq7vejqdlepiz2wagxalddvj42atmimzudemnga",
-       "display_name": "k8s-private-subnet",
-       "dns_label": null,
-       "freeform_tags": {},
-       "id": "ocid1.subnet.oc1.iad.aaaaaaaatalftxvodwnyddtc5tclephdguftpaxrxtnxnk4urcxtnudre3ta",
-       "ipv6cidr_block": null,
-       "ipv6cidr_blocks": [],
-       "ipv6virtual_router_ip": null,
-       "prohibit_internet_ingress": true,
-       "prohibit_public_ip_on_vnic": true,
-       "route_table_id": "ocid1.routetable.oc1.iad.aaaaaaaaeqnl4gvwhvrbnu47abcz4qwjx5o7kicwtm6y4ykhq2muks7al2qa",
-       "security_list_ids": [
-        "ocid1.securitylist.oc1.iad.aaaaaaaasjbfdcxuwci34znqaerfayge4enahyl3axfa64iunh3ekaqbnwjq"
-       ],
-       "state": "AVAILABLE",
-       "subnet_domain_name": null,
-       "time_created": "2023-04-20 11:21:11.446 +0000 UTC",
-       "timeouts": null,
-       "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a",
-       "virtual_router_ip": "10.0.1.1",
-       "virtual_router_mac": "00:00:17:EB:49:50"
-      }
-     },
-     {
-      "address": "oci_core_subnet.vcn_public_subnet",
-      "depends_on": [
-       "module.vcn.module.drg_from_vcn_module.oci_core_drg.drg",
-       "module.vcn.oci_core_internet_gateway.ig",
-       "module.vcn.oci_core_route_table.ig",
-       "module.vcn.oci_core_vcn.vcn",
-       "oci_core_security_list.public_subnet_sl"
-      ],
-      "mode": "managed",
-      "name": "vcn_public_subnet",
-      "provider_name": "registry.terraform.io/hashicorp/oci",
-      "schema_version": 0,
-      "sensitive_values": {
-       "defined_tags": {},
-       "freeform_tags": {},
-       "ipv6cidr_blocks": [],
-       "security_list_ids": [
-        false
-       ]
-      },
-      "type": "oci_core_subnet",
-      "values": {
-       "availability_domain": null,
-       "cidr_block": "10.0.0.0/24",
-       "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-       "defined_tags": {
-        "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-        "Oracle-Tags.CreatedOn": "2023-04-20T11:21:08.677Z"
-       },
-       "dhcp_options_id": "ocid1.dhcpoptions.oc1.iad.aaaaaaaadpggo7tmippv6xq7vejqdlepiz2wagxalddvj42atmimzudemnga",
-       "display_name": "k8s-public-subnet",
-       "dns_label": null,
-       "freeform_tags": {},
-       "id": "ocid1.subnet.oc1.iad.aaaaaaaaumsvv4jxaetmpqa4ak7h5uewkzkq37ayvyoknvk337a6elnmsf6q",
-       "ipv6cidr_block": null,
-       "ipv6cidr_blocks": [],
-       "ipv6virtual_router_ip": null,
-       "prohibit_internet_ingress": false,
-       "prohibit_public_ip_on_vnic": false,
-       "route_table_id": "ocid1.routetable.oc1.iad.aaaaaaaa7oxz5rcz7fjxycethp4pjliohbsj4ty5pnkx37pqmdkx3efytada",
-       "security_list_ids": [
-        "ocid1.securitylist.oc1.iad.aaaaaaaawzkbks3zosbne5ueipfcqqbk4plcqxjfjbjzzvvs2jxw53u6hkvq"
-       ],
-       "state": "AVAILABLE",
-       "subnet_domain_name": null,
-       "time_created": "2023-04-20 11:21:08.781 +0000 UTC",
-       "timeouts": null,
-       "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a",
-       "virtual_router_ip": "10.0.0.1",
-       "virtual_router_mac": "00:00:17:EB:49:50"
-      }
      }
     ]
    }
@@ -4082,20 +2580,18 @@
  },
  "relevant_attributes": [
   {
-   "attribute": [],
-   "resource": "module.vcn.module.drg_from_vcn_module.oci_core_drg_attachment.vcns"
-  },
-  {
    "attribute": [
-    "display_name"
+    "id"
    ],
    "resource": "module.vcn.module.drg_from_vcn_module.oci_core_drg.drg"
   },
   {
-   "attribute": [
-    "id"
-   ],
-   "resource": "oci_containerengine_cluster.k8s_cluster"
+   "attribute": [],
+   "resource": "module.vcn.oci_core_vcn.vcn"
+  },
+  {
+   "attribute": [],
+   "resource": "module.vcn.oci_core_local_peering_gateway.lpg"
   },
   {
    "attribute": [],
@@ -4103,11 +2599,13 @@
   },
   {
    "attribute": [],
-   "resource": "module.vcn.module.drg_from_vcn_module[0].oci_core_drg.drg"
+   "resource": "module.vcn.module.drg_from_vcn_module.oci_core_drg_attachment.vcns"
   },
   {
-   "attribute": [],
-   "resource": "module.vcn.oci_core_internet_gateway.ig"
+   "attribute": [
+    "id"
+   ],
+   "resource": "oci_core_security_list.public_subnet_sl"
   },
   {
    "attribute": [
@@ -4120,35 +2618,43 @@
    "attribute": [
     "id"
    ],
-   "resource": "module.vcn.module.drg_from_vcn_module.oci_core_drg.drg"
+   "resource": "oci_containerengine_cluster.k8s_cluster"
+  },
+  {
+   "attribute": [],
+   "resource": "module.vcn.oci_core_route_table.ig"
   },
   {
    "attribute": [
     "display_name"
    ],
+   "resource": "module.vcn.module.drg_from_vcn_module.oci_core_drg.drg"
+  },
+  {
+   "attribute": [
+    "id"
+   ],
    "resource": "module.vcn.oci_core_vcn.vcn"
   },
   {
    "attribute": [
-    "images",
-    0,
     "id"
    ],
-   "resource": "data.oci_core_images.latest_image"
-  },
-  {
-   "attribute": [],
-   "resource": "module.vcn.oci_core_drg_attachment.drg_from_vcn_module"
-  },
-  {
-   "attribute": [],
-   "resource": "module.vcn.oci_core_local_peering_gateway.lpg"
+   "resource": "module.vcn.oci_core_internet_gateway.ig[0]"
   },
   {
    "attribute": [
-    "availability_domains"
+    "id"
    ],
-   "resource": "data.oci_identity_availability_domains.ads"
+   "resource": "oci_core_security_list.private_subnet_sl"
+  },
+  {
+   "attribute": [],
+   "resource": "module.vcn.oci_core_internet_gateway.ig"
+  },
+  {
+   "attribute": [],
+   "resource": "module.vcn.oci_core_service_gateway.service_gateway"
   },
   {
    "attribute": [],
@@ -4162,12 +2668,28 @@
   },
   {
    "attribute": [
-    "id"
+    "availability_domains"
    ],
-   "resource": "module.vcn.oci_core_vcn.vcn"
+   "resource": "data.oci_identity_availability_domains.ads"
   },
   {
    "attribute": [],
+   "resource": "module.vcn.oci_core_route_table.nat"
+  },
+  {
+   "attribute": [
+    "id"
+   ],
+   "resource": "oci_containerengine_node_pool.k8s_node_pool"
+  },
+  {
+   "attribute": [],
+   "resource": "module.vcn.module.drg_from_vcn_module[0].oci_core_drg.drg"
+  },
+  {
+   "attribute": [
+    "default_security_list_id"
+   ],
    "resource": "module.vcn.oci_core_vcn.vcn"
   },
   {
@@ -4183,22 +2705,28 @@
    "resource": "module.vcn.oci_core_service_gateway.service_gateway[0]"
   },
   {
+   "attribute": [],
+   "resource": "module.vcn.oci_core_drg_attachment.drg_from_vcn_module"
+  },
+  {
    "attribute": [
     "id"
    ],
-   "resource": "module.vcn.oci_core_internet_gateway.ig[0]"
+   "resource": "oci_core_subnet.vcn_public_subnet"
   },
   {
-   "attribute": [],
-   "resource": "module.vcn.oci_core_route_table.ig"
+   "attribute": [
+    "images",
+    0,
+    "id"
+   ],
+   "resource": "data.oci_core_images.latest_image"
   },
   {
-   "attribute": [],
-   "resource": "module.vcn.oci_core_service_gateway.service_gateway"
-  },
-  {
-   "attribute": [],
-   "resource": "module.vcn.oci_core_route_table.nat"
+   "attribute": [
+    "display_name"
+   ],
+   "resource": "module.vcn.oci_core_vcn.vcn"
   }
  ],
  "resource_changes": [
@@ -4206,49 +2734,32 @@
    "address": "oci_artifacts_container_repository.docker_repo",
    "change": {
     "actions": [
-     "no-op"
+     "create"
     ],
     "after": {
-     "billable_size_in_gbs": "0",
      "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-     "created_by": "ocid1.user.oc1..aaaaaaaa34q5m5rhn2i3o6g7ufvdv7lornxxln65h4cljz4rlxxtvdnqeerq",
      "display_name": "kubernetes-nginx",
-     "id": "ocid1.containerrepo.oc1.iad.0.idxfqxqnytht.aaaaaaaaveoc3axa5cpyffvto73lyseauue4o47msvehl5vjfbtga3s5nnxa",
-     "image_count": 0,
      "is_immutable": false,
      "is_public": false,
-     "layer_count": 0,
-     "layers_size_in_bytes": "0",
-     "readme": [],
-     "state": "AVAILABLE",
-     "time_created": "2023-04-20 11:21:01.521 +0000 UTC",
-     "time_last_pushed": null,
      "timeouts": null
     },
     "after_sensitive": {
      "readme": []
     },
-    "after_unknown": {},
-    "before": {
-     "billable_size_in_gbs": "0",
-     "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-     "created_by": "ocid1.user.oc1..aaaaaaaa34q5m5rhn2i3o6g7ufvdv7lornxxln65h4cljz4rlxxtvdnqeerq",
-     "display_name": "kubernetes-nginx",
-     "id": "ocid1.containerrepo.oc1.iad.0.idxfqxqnytht.aaaaaaaaveoc3axa5cpyffvto73lyseauue4o47msvehl5vjfbtga3s5nnxa",
-     "image_count": 0,
-     "is_immutable": false,
-     "is_public": false,
-     "layer_count": 0,
-     "layers_size_in_bytes": "0",
-     "readme": [],
-     "state": "AVAILABLE",
-     "time_created": "2023-04-20 11:21:01.521 +0000 UTC",
-     "time_last_pushed": null,
-     "timeouts": null
+    "after_unknown": {
+     "billable_size_in_gbs": true,
+     "created_by": true,
+     "id": true,
+     "image_count": true,
+     "layer_count": true,
+     "layers_size_in_bytes": true,
+     "readme": true,
+     "state": true,
+     "time_created": true,
+     "time_last_pushed": true
     },
-    "before_sensitive": {
-     "readme": []
-    }
+    "before": null,
+    "before_sensitive": false
    },
    "mode": "managed",
    "name": "docker_repo",
@@ -4259,59 +2770,17 @@
    "address": "oci_containerengine_cluster.k8s_cluster",
    "change": {
     "actions": [
-     "no-op"
+     "create"
     ],
     "after": {
-     "available_kubernetes_upgrades": [],
-     "cluster_pod_network_options": [
-      {
-       "cni_type": "FLANNEL_OVERLAY"
-      }
-     ],
      "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-     "defined_tags": {
-      "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-      "Oracle-Tags.CreatedOn": "2023-04-20T11:21:12.575Z"
-     },
      "endpoint_config": [
       {
        "is_public_ip_enabled": true,
-       "nsg_ids": [],
-       "subnet_id": "ocid1.subnet.oc1.iad.aaaaaaaaumsvv4jxaetmpqa4ak7h5uewkzkq37ayvyoknvk337a6elnmsf6q"
+       "nsg_ids": null
       }
      ],
-     "endpoints": [
-      {
-       "kubernetes": "",
-       "private_endpoint": "10.0.0.246:6443",
-       "public_endpoint": "129.80.195.209:6443",
-       "vcn_hostname_endpoint": ""
-      }
-     ],
-     "freeform_tags": {},
-     "id": "ocid1.cluster.oc1.iad.aaaaaaaazwmsedu4onn57sdunk5f2cwnr2onrvgbcc7loowjocogl637xm5q",
-     "image_policy_config": [
-      {
-       "is_policy_enabled": false,
-       "key_details": []
-      }
-     ],
-     "kms_key_id": null,
      "kubernetes_version": "v1.25.4",
-     "lifecycle_details": null,
-     "metadata": [
-      {
-       "created_by_user_id": "ocid1.user.oc1..aaaaaaaa34q5m5rhn2i3o6g7ufvdv7lornxxln65h4cljz4rlxxtvdnqeerq",
-       "created_by_work_request_id": "ocid1.clustersworkrequest.oc1.iad.aaaaaaaa37aozq6v5pq2rrl2mqleqmtwg66hnyi7k67jsqneuwhkrsglk6ea",
-       "deleted_by_user_id": "",
-       "deleted_by_work_request_id": "",
-       "time_created": "2023-04-20 11:21:14 +0000 UTC",
-       "time_deleted": "",
-       "time_updated": "",
-       "updated_by_user_id": "",
-       "updated_by_work_request_id": ""
-      }
-     ],
      "name": "k8s-cluster",
      "options": [
       {
@@ -4321,237 +2790,78 @@
          "is_tiller_enabled": false
         }
        ],
-       "admission_controller_options": [
-        {
-         "is_pod_security_policy_enabled": false
-        }
-       ],
        "kubernetes_network_config": [
         {
          "pods_cidr": "10.244.0.0/16",
          "services_cidr": "10.96.0.0/16"
         }
-       ],
-       "persistent_volume_config": [
-        {
-         "defined_tags": {},
-         "freeform_tags": {}
-        }
-       ],
-       "service_lb_config": [
-        {
-         "defined_tags": {},
-         "freeform_tags": {}
-        }
-       ],
-       "service_lb_subnet_ids": [
-        "ocid1.subnet.oc1.iad.aaaaaaaaumsvv4jxaetmpqa4ak7h5uewkzkq37ayvyoknvk337a6elnmsf6q"
        ]
       }
      ],
-     "state": "ACTIVE",
-     "timeouts": null,
-     "type": "BASIC_CLUSTER",
-     "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a"
+     "timeouts": null
     },
     "after_sensitive": {
      "available_kubernetes_upgrades": [],
-     "cluster_pod_network_options": [
-      {}
-     ],
+     "cluster_pod_network_options": [],
      "defined_tags": {},
      "endpoint_config": [
-      {
-       "nsg_ids": []
-      }
-     ],
-     "endpoints": [
       {}
      ],
+     "endpoints": [],
      "freeform_tags": {},
-     "image_policy_config": [
-      {
-       "key_details": []
-      }
-     ],
-     "metadata": [
-      {}
-     ],
+     "image_policy_config": [],
+     "metadata": [],
      "options": [
       {
        "add_ons": [
         {}
        ],
-       "admission_controller_options": [
-        {}
-       ],
+       "admission_controller_options": [],
        "kubernetes_network_config": [
         {}
        ],
-       "persistent_volume_config": [
-        {
-         "defined_tags": {},
-         "freeform_tags": {}
-        }
-       ],
-       "service_lb_config": [
-        {
-         "defined_tags": {},
-         "freeform_tags": {}
-        }
-       ],
-       "service_lb_subnet_ids": [
-        false
-       ]
+       "persistent_volume_config": [],
+       "service_lb_config": [],
+       "service_lb_subnet_ids": []
       }
      ]
     },
-    "after_unknown": {},
-    "before": {
-     "available_kubernetes_upgrades": [],
-     "cluster_pod_network_options": [
-      {
-       "cni_type": "FLANNEL_OVERLAY"
-      }
-     ],
-     "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-     "defined_tags": {
-      "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-      "Oracle-Tags.CreatedOn": "2023-04-20T11:21:12.575Z"
-     },
+    "after_unknown": {
+     "available_kubernetes_upgrades": true,
+     "cluster_pod_network_options": true,
+     "defined_tags": true,
      "endpoint_config": [
       {
-       "is_public_ip_enabled": true,
-       "nsg_ids": [],
-       "subnet_id": "ocid1.subnet.oc1.iad.aaaaaaaaumsvv4jxaetmpqa4ak7h5uewkzkq37ayvyoknvk337a6elnmsf6q"
+       "subnet_id": true
       }
      ],
-     "endpoints": [
-      {
-       "kubernetes": "",
-       "private_endpoint": "10.0.0.246:6443",
-       "public_endpoint": "129.80.195.209:6443",
-       "vcn_hostname_endpoint": ""
-      }
-     ],
-     "freeform_tags": {},
-     "id": "ocid1.cluster.oc1.iad.aaaaaaaazwmsedu4onn57sdunk5f2cwnr2onrvgbcc7loowjocogl637xm5q",
-     "image_policy_config": [
-      {
-       "is_policy_enabled": false,
-       "key_details": []
-      }
-     ],
-     "kms_key_id": null,
-     "kubernetes_version": "v1.25.4",
-     "lifecycle_details": null,
-     "metadata": [
-      {
-       "created_by_user_id": "ocid1.user.oc1..aaaaaaaa34q5m5rhn2i3o6g7ufvdv7lornxxln65h4cljz4rlxxtvdnqeerq",
-       "created_by_work_request_id": "ocid1.clustersworkrequest.oc1.iad.aaaaaaaa37aozq6v5pq2rrl2mqleqmtwg66hnyi7k67jsqneuwhkrsglk6ea",
-       "deleted_by_user_id": "",
-       "deleted_by_work_request_id": "",
-       "time_created": "2023-04-20 11:21:14 +0000 UTC",
-       "time_deleted": "",
-       "time_updated": "",
-       "updated_by_user_id": "",
-       "updated_by_work_request_id": ""
-      }
-     ],
-     "name": "k8s-cluster",
+     "endpoints": true,
+     "freeform_tags": true,
+     "id": true,
+     "image_policy_config": true,
+     "kms_key_id": true,
+     "lifecycle_details": true,
+     "metadata": true,
      "options": [
       {
        "add_ons": [
-        {
-         "is_kubernetes_dashboard_enabled": false,
-         "is_tiller_enabled": false
-        }
+        {}
        ],
-       "admission_controller_options": [
-        {
-         "is_pod_security_policy_enabled": false
-        }
-       ],
+       "admission_controller_options": true,
        "kubernetes_network_config": [
-        {
-         "pods_cidr": "10.244.0.0/16",
-         "services_cidr": "10.96.0.0/16"
-        }
+        {}
        ],
-       "persistent_volume_config": [
-        {
-         "defined_tags": {},
-         "freeform_tags": {}
-        }
-       ],
-       "service_lb_config": [
-        {
-         "defined_tags": {},
-         "freeform_tags": {}
-        }
-       ],
-       "service_lb_subnet_ids": [
-        "ocid1.subnet.oc1.iad.aaaaaaaaumsvv4jxaetmpqa4ak7h5uewkzkq37ayvyoknvk337a6elnmsf6q"
-       ]
+       "persistent_volume_config": true,
+       "service_lb_config": true,
+       "service_lb_subnet_ids": true
       }
      ],
-     "state": "ACTIVE",
-     "timeouts": null,
-     "type": "BASIC_CLUSTER",
-     "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a"
+     "state": true,
+     "type": true,
+     "vcn_id": true
     },
-    "before_sensitive": {
-     "available_kubernetes_upgrades": [],
-     "cluster_pod_network_options": [
-      {}
-     ],
-     "defined_tags": {},
-     "endpoint_config": [
-      {
-       "nsg_ids": []
-      }
-     ],
-     "endpoints": [
-      {}
-     ],
-     "freeform_tags": {},
-     "image_policy_config": [
-      {
-       "key_details": []
-      }
-     ],
-     "metadata": [
-      {}
-     ],
-     "options": [
-      {
-       "add_ons": [
-        {}
-       ],
-       "admission_controller_options": [
-        {}
-       ],
-       "kubernetes_network_config": [
-        {}
-       ],
-       "persistent_volume_config": [
-        {
-         "defined_tags": {},
-         "freeform_tags": {}
-        }
-       ],
-       "service_lb_config": [
-        {
-         "defined_tags": {},
-         "freeform_tags": {}
-        }
-       ],
-       "service_lb_subnet_ids": [
-        false
-       ]
-      }
-     ]
-    }
+    "before": null,
+    "before_sensitive": false
    },
    "mode": "managed",
    "name": "k8s_cluster",
@@ -4562,17 +2872,10 @@
    "address": "oci_containerengine_node_pool.k8s_node_pool",
    "change": {
     "actions": [
-     "update"
+     "create"
     ],
     "after": {
-     "cluster_id": "ocid1.cluster.oc1.iad.aaaaaaaazwmsedu4onn57sdunk5f2cwnr2onrvgbcc7loowjocogl637xm5q",
      "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-     "defined_tags": {
-      "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-      "Oracle-Tags.CreatedOn": "2023-04-20T11:32:49.875Z"
-     },
-     "freeform_tags": {},
-     "id": "ocid1.nodepool.oc1.iad.aaaaaaaaq5tgpnb2osioc7s3il6lsfcnto5ridkl2cpjierr5n5wyqfyfgxq",
      "initial_node_labels": [
       {
        "key": "name",
@@ -4580,53 +2883,23 @@
       }
      ],
      "kubernetes_version": "v1.25.4",
-     "lifecycle_details": null,
      "name": "k8s-node-pool",
      "node_config_details": [
       {
-       "defined_tags": {},
-       "freeform_tags": {},
-       "is_pv_encryption_in_transit_enabled": false,
-       "kms_key_id": "",
-       "node_pool_pod_network_option_details": [
-        {
-         "cni_type": "FLANNEL_OVERLAY",
-         "max_pods_per_node": 0,
-         "pod_nsg_ids": [],
-         "pod_subnet_ids": []
-        }
-       ],
-       "nsg_ids": [],
        "placement_configs": [
         {
-         "availability_domain": "PCDN:US-ASHBURN-AD-1",
-         "capacity_reservation_id": "",
-         "fault_domains": [],
-         "preemptible_node_config": [],
-         "subnet_id": "ocid1.subnet.oc1.iad.aaaaaaaatalftxvodwnyddtc5tclephdguftpaxrxtnxnk4urcxtnudre3ta"
+         "availability_domain": "PCDN:US-ASHBURN-AD-1"
         },
         {
-         "availability_domain": "PCDN:US-ASHBURN-AD-2",
-         "capacity_reservation_id": "",
-         "fault_domains": [],
-         "preemptible_node_config": [],
-         "subnet_id": "ocid1.subnet.oc1.iad.aaaaaaaatalftxvodwnyddtc5tclephdguftpaxrxtnxnk4urcxtnudre3ta"
+         "availability_domain": "PCDN:US-ASHBURN-AD-2"
         },
         {
-         "availability_domain": "PCDN:US-ASHBURN-AD-3",
-         "capacity_reservation_id": "",
-         "fault_domains": [],
-         "preemptible_node_config": [],
-         "subnet_id": "ocid1.subnet.oc1.iad.aaaaaaaatalftxvodwnyddtc5tclephdguftpaxrxtnxnk4urcxtnudre3ta"
+         "availability_domain": "PCDN:US-ASHBURN-AD-3"
         }
        ],
        "size": 2
       }
      ],
-     "node_eviction_node_pool_settings": [],
-     "node_image_id": "ocid1.image.oc1.iad.aaaaaaaartyhalkufaggccptto44jhz6mu2xihhbveu3y43agiimbndldbzq",
-     "node_image_name": "Oracle-Linux-7.9-aarch64-2023.03.28-0",
-     "node_metadata": {},
      "node_shape": "VM.Standard.A1.Flex",
      "node_shape_config": [
       {
@@ -4634,60 +2907,13 @@
        "ocpus": 1
       }
      ],
-     "node_source": [
-      {
-       "image_id": "ocid1.image.oc1.iad.aaaaaaaartyhalkufaggccptto44jhz6mu2xihhbveu3y43agiimbndldbzq",
-       "source_name": "Oracle-Linux-7.9-aarch64-2023.03.28-0",
-       "source_type": "IMAGE"
-      }
-     ],
      "node_source_details": [
       {
-       "boot_volume_size_in_gbs": "",
        "image_id": "ocid1.image.oc1.iad.aaaaaaaartyhalkufaggccptto44jhz6mu2xihhbveu3y43agiimbndldbzq",
-       "source_type": "IMAGE"
+       "source_type": "image"
       }
      ],
-     "nodes": [
-      {
-       "availability_domain": "PCDN:US-ASHBURN-AD-3",
-       "defined_tags": {},
-       "error": [],
-       "fault_domain": "FAULT-DOMAIN-1",
-       "freeform_tags": {},
-       "id": "ocid1.instance.oc1.iad.anuwcljs2322dlyc5vwdyw5l7vg6secjuk3sr66sxqkkaz53icrhfiltn3sa",
-       "kubernetes_version": "v1.25.4",
-       "lifecycle_details": "",
-       "name": "oke-cogl637xm5q-n5wyqfyfgxq-sxtnudre3ta-0",
-       "node_pool_id": "ocid1.nodepool.oc1.iad.aaaaaaaaq5tgpnb2osioc7s3il6lsfcnto5ridkl2cpjierr5n5wyqfyfgxq",
-       "private_ip": "10.0.1.181",
-       "public_ip": "",
-       "state": "ACTIVE",
-       "subnet_id": "ocid1.subnet.oc1.iad.aaaaaaaatalftxvodwnyddtc5tclephdguftpaxrxtnxnk4urcxtnudre3ta"
-      },
-      {
-       "availability_domain": "PCDN:US-ASHBURN-AD-2",
-       "defined_tags": {},
-       "error": [],
-       "fault_domain": "FAULT-DOMAIN-2",
-       "freeform_tags": {},
-       "id": "ocid1.instance.oc1.iad.anuwcljr2322dlycc5ve6pwm7dhf5i5vcnatjx7k3zxwh7s25fuhmdod3r6q",
-       "kubernetes_version": "v1.25.4",
-       "lifecycle_details": "",
-       "name": "oke-cogl637xm5q-n5wyqfyfgxq-sxtnudre3ta-1",
-       "node_pool_id": "ocid1.nodepool.oc1.iad.aaaaaaaaq5tgpnb2osioc7s3il6lsfcnto5ridkl2cpjierr5n5wyqfyfgxq",
-       "private_ip": "10.0.1.23",
-       "public_ip": "",
-       "state": "ACTIVE",
-       "subnet_id": "ocid1.subnet.oc1.iad.aaaaaaaatalftxvodwnyddtc5tclephdguftpaxrxtnxnk4urcxtnudre3ta"
-      }
-     ],
-     "quantity_per_subnet": 0,
      "ssh_public_key": "ssh_public_key=ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDlNJvDif3ixSiqrdaAiYewE3AYp5SJTFP/XGMjfir+fmfx8aeV9V4dbdOabJ68SW9Zag/puvFxRSFnpQ17FKdFxL6m96qFsYv0yd6Mh8MYx3+L0/BMoYWc3AXYWbc4Fb4HOEusvK/5JUwQTtdyOpvrHDky48+HBrV9vnX6fXmNXuoCdR7XLjq3X4/6WzCP/5OA80pG+NQHGi5/CUtPfFZFLE9Tatbr3n+BQ9aooboZs350QBOkRw/05ChumlPxmDc0Vb5CxFhjrka7sgC+XDaUizytcodoTwE5RYVZzXc50NGI6ZXRoo3hXDO0jjpIMIgkcpoiNzgo2+qhsgIFDq3b+WtWiLKbRKAAtQi8iHQkWifB8MreRvWoONt4MblF2WOQPfnpqAqVqb5YwusadVHWvxamnwGiU5M8pBrPdkU9RgG7oF5yDi8360HIaPUPuvrn2fLSI03fOqUE0mdLUPE2sD2P/abVQlbGuFk1Gqj7qXtt/oNePNeEBgBcCvNwEUc= gilby@lenovo_laptop",
-     "state": "ACTIVE",
-     "subnet_ids": [
-      "ocid1.subnet.oc1.iad.aaaaaaaatalftxvodwnyddtc5tclephdguftpaxrxtnxnk4urcxtnudre3ta"
-     ],
      "timeouts": null
     },
     "after_sensitive": {
@@ -4700,12 +2926,7 @@
       {
        "defined_tags": {},
        "freeform_tags": {},
-       "node_pool_pod_network_option_details": [
-        {
-         "pod_nsg_ids": [],
-         "pod_subnet_ids": []
-        }
-       ],
+       "node_pool_pod_network_option_details": [],
        "nsg_ids": [],
        "placement_configs": [
         {
@@ -4728,215 +2949,72 @@
      "node_shape_config": [
       {}
      ],
-     "node_source": [
-      {}
-     ],
+     "node_source": [],
      "node_source_details": [
       {}
      ],
-     "nodes": [
-      {
-       "defined_tags": {},
-       "error": [],
-       "freeform_tags": {}
-      },
-      {
-       "defined_tags": {},
-       "error": [],
-       "freeform_tags": {}
-      }
-     ],
-     "subnet_ids": [
-      false
-     ]
+     "nodes": [],
+     "subnet_ids": []
     },
-    "after_unknown": {},
-    "before": {
-     "cluster_id": "ocid1.cluster.oc1.iad.aaaaaaaazwmsedu4onn57sdunk5f2cwnr2onrvgbcc7loowjocogl637xm5q",
-     "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-     "defined_tags": {
-      "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-      "Oracle-Tags.CreatedOn": "2023-04-20T11:32:49.875Z"
-     },
-     "freeform_tags": {},
-     "id": "ocid1.nodepool.oc1.iad.aaaaaaaaq5tgpnb2osioc7s3il6lsfcnto5ridkl2cpjierr5n5wyqfyfgxq",
-     "initial_node_labels": [
-      {
-       "key": "name",
-       "value": "k8s-cluster"
-      }
-     ],
-     "kubernetes_version": "v1.25.4",
-     "lifecycle_details": null,
-     "name": "k8s-node-pool",
-     "node_config_details": [
-      {
-       "defined_tags": {},
-       "freeform_tags": {},
-       "is_pv_encryption_in_transit_enabled": false,
-       "kms_key_id": "",
-       "node_pool_pod_network_option_details": [
-        {
-         "cni_type": "FLANNEL_OVERLAY",
-         "max_pods_per_node": 0,
-         "pod_nsg_ids": [],
-         "pod_subnet_ids": []
-        }
-       ],
-       "nsg_ids": [],
-       "placement_configs": [
-        {
-         "availability_domain": "PCDN:US-ASHBURN-AD-1",
-         "capacity_reservation_id": "",
-         "fault_domains": [],
-         "preemptible_node_config": [],
-         "subnet_id": "ocid1.subnet.oc1.iad.aaaaaaaatalftxvodwnyddtc5tclephdguftpaxrxtnxnk4urcxtnudre3ta"
-        },
-        {
-         "availability_domain": "PCDN:US-ASHBURN-AD-2",
-         "capacity_reservation_id": "",
-         "fault_domains": [],
-         "preemptible_node_config": [],
-         "subnet_id": "ocid1.subnet.oc1.iad.aaaaaaaatalftxvodwnyddtc5tclephdguftpaxrxtnxnk4urcxtnudre3ta"
-        },
-        {
-         "availability_domain": "PCDN:US-ASHBURN-AD-3",
-         "capacity_reservation_id": "",
-         "fault_domains": [],
-         "preemptible_node_config": [],
-         "subnet_id": "ocid1.subnet.oc1.iad.aaaaaaaatalftxvodwnyddtc5tclephdguftpaxrxtnxnk4urcxtnudre3ta"
-        }
-       ],
-       "size": 2
-      }
-     ],
-     "node_eviction_node_pool_settings": [],
-     "node_image_id": "ocid1.image.oc1.iad.aaaaaaaartyhalkufaggccptto44jhz6mu2xihhbveu3y43agiimbndldbzq",
-     "node_image_name": "Oracle-Linux-7.9-aarch64-2023.03.28-0",
-     "node_metadata": {},
-     "node_shape": "VM.Standard.A1.Flex",
-     "node_shape_config": [
-      {
-       "memory_in_gbs": 6,
-       "ocpus": 1
-      }
-     ],
-     "node_source": [
-      {
-       "image_id": "ocid1.image.oc1.iad.aaaaaaaartyhalkufaggccptto44jhz6mu2xihhbveu3y43agiimbndldbzq",
-       "source_name": "Oracle-Linux-7.9-aarch64-2023.03.28-0",
-       "source_type": "IMAGE"
-      }
-     ],
-     "node_source_details": [
-      {
-       "boot_volume_size_in_gbs": "",
-       "image_id": "ocid1.image.oc1.iad.aaaaaaaartyhalkufaggccptto44jhz6mu2xihhbveu3y43agiimbndldbzq",
-       "source_type": "IMAGE"
-      }
-     ],
-     "nodes": [
-      {
-       "availability_domain": "PCDN:US-ASHBURN-AD-3",
-       "defined_tags": {},
-       "error": [],
-       "fault_domain": "FAULT-DOMAIN-1",
-       "freeform_tags": {},
-       "id": "ocid1.instance.oc1.iad.anuwcljs2322dlyc5vwdyw5l7vg6secjuk3sr66sxqkkaz53icrhfiltn3sa",
-       "kubernetes_version": "v1.25.4",
-       "lifecycle_details": "",
-       "name": "oke-cogl637xm5q-n5wyqfyfgxq-sxtnudre3ta-0",
-       "node_pool_id": "ocid1.nodepool.oc1.iad.aaaaaaaaq5tgpnb2osioc7s3il6lsfcnto5ridkl2cpjierr5n5wyqfyfgxq",
-       "private_ip": "10.0.1.181",
-       "public_ip": "",
-       "state": "ACTIVE",
-       "subnet_id": "ocid1.subnet.oc1.iad.aaaaaaaatalftxvodwnyddtc5tclephdguftpaxrxtnxnk4urcxtnudre3ta"
-      },
-      {
-       "availability_domain": "PCDN:US-ASHBURN-AD-2",
-       "defined_tags": {},
-       "error": [],
-       "fault_domain": "FAULT-DOMAIN-2",
-       "freeform_tags": {},
-       "id": "ocid1.instance.oc1.iad.anuwcljr2322dlycc5ve6pwm7dhf5i5vcnatjx7k3zxwh7s25fuhmdod3r6q",
-       "kubernetes_version": "v1.25.4",
-       "lifecycle_details": "",
-       "name": "oke-cogl637xm5q-n5wyqfyfgxq-sxtnudre3ta-1",
-       "node_pool_id": "ocid1.nodepool.oc1.iad.aaaaaaaaq5tgpnb2osioc7s3il6lsfcnto5ridkl2cpjierr5n5wyqfyfgxq",
-       "private_ip": "10.0.1.23",
-       "public_ip": "",
-       "state": "ACTIVE",
-       "subnet_id": "ocid1.subnet.oc1.iad.aaaaaaaatalftxvodwnyddtc5tclephdguftpaxrxtnxnk4urcxtnudre3ta"
-      }
-     ],
-     "quantity_per_subnet": 0,
-     "ssh_public_key": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDlNJvDif3ixSiqrdaAiYewE3AYp5SJTFP/XGMjfir+fmfx8aeV9V4dbdOabJ68SW9Zag/puvFxRSFnpQ17FKdFxL6m96qFsYv0yd6Mh8MYx3+L0/BMoYWc3AXYWbc4Fb4HOEusvK/5JUwQTtdyOpvrHDky48+HBrV9vnX6fXmNXuoCdR7XLjq3X4/6WzCP/5OA80pG+NQHGi5/CUtPfFZFLE9Tatbr3n+BQ9aooboZs350QBOkRw/05ChumlPxmDc0Vb5CxFhjrka7sgC+XDaUizytcodoTwE5RYVZzXc50NGI6ZXRoo3hXDO0jjpIMIgkcpoiNzgo2+qhsgIFDq3b+WtWiLKbRKAAtQi8iHQkWifB8MreRvWoONt4MblF2WOQPfnpqAqVqb5YwusadVHWvxamnwGiU5M8pBrPdkU9RgG7oF5yDi8360HIaPUPuvrn2fLSI03fOqUE0mdLUPE2sD2P/abVQlbGuFk1Gqj7qXtt/oNePNeEBgBcCvNwEUc= gilby@lenovo_laptop",
-     "state": "ACTIVE",
-     "subnet_ids": [
-      "ocid1.subnet.oc1.iad.aaaaaaaatalftxvodwnyddtc5tclephdguftpaxrxtnxnk4urcxtnudre3ta"
-     ],
-     "timeouts": null
-    },
-    "before_sensitive": {
-     "defined_tags": {},
-     "freeform_tags": {},
+    "after_unknown": {
+     "cluster_id": true,
+     "defined_tags": true,
+     "freeform_tags": true,
+     "id": true,
      "initial_node_labels": [
       {}
      ],
+     "lifecycle_details": true,
      "node_config_details": [
       {
-       "defined_tags": {},
-       "freeform_tags": {},
-       "node_pool_pod_network_option_details": [
-        {
-         "pod_nsg_ids": [],
-         "pod_subnet_ids": []
-        }
-       ],
-       "nsg_ids": [],
+       "defined_tags": true,
+       "freeform_tags": true,
+       "is_pv_encryption_in_transit_enabled": true,
+       "kms_key_id": true,
+       "node_pool_pod_network_option_details": true,
+       "nsg_ids": true,
        "placement_configs": [
         {
-         "fault_domains": [],
-         "preemptible_node_config": []
+         "capacity_reservation_id": true,
+         "fault_domains": true,
+         "preemptible_node_config": true,
+         "subnet_id": true
         },
         {
-         "fault_domains": [],
-         "preemptible_node_config": []
+         "capacity_reservation_id": true,
+         "fault_domains": true,
+         "preemptible_node_config": true,
+         "subnet_id": true
         },
         {
-         "fault_domains": [],
-         "preemptible_node_config": []
+         "capacity_reservation_id": true,
+         "fault_domains": true,
+         "preemptible_node_config": true,
+         "subnet_id": true
         }
        ]
       }
      ],
-     "node_eviction_node_pool_settings": [],
-     "node_metadata": {},
+     "node_eviction_node_pool_settings": true,
+     "node_image_id": true,
+     "node_image_name": true,
+     "node_metadata": true,
      "node_shape_config": [
       {}
      ],
-     "node_source": [
-      {}
-     ],
+     "node_source": true,
      "node_source_details": [
-      {}
-     ],
-     "nodes": [
       {
-       "defined_tags": {},
-       "error": [],
-       "freeform_tags": {}
-      },
-      {
-       "defined_tags": {},
-       "error": [],
-       "freeform_tags": {}
+       "boot_volume_size_in_gbs": true
       }
      ],
-     "subnet_ids": [
-      false
-     ]
-    }
+     "nodes": true,
+     "quantity_per_subnet": true,
+     "state": true,
+     "subnet_ids": true
+    },
+    "before": null,
+    "before_sensitive": false
    },
    "mode": "managed",
    "name": "k8s_node_pool",
@@ -4947,18 +3025,13 @@
    "address": "oci_core_security_list.private_subnet_sl",
    "change": {
     "actions": [
-     "no-op"
+     "create"
     ],
     "after": {
      "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-     "defined_tags": {
-      "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-      "Oracle-Tags.CreatedOn": "2023-04-20T11:21:06.188Z"
-     },
      "display_name": "k8s-private-subnet-sl",
      "egress_security_rules": [
       {
-       "description": "",
        "destination": "0.0.0.0/0",
        "destination_type": "CIDR_BLOCK",
        "icmp_options": [],
@@ -4968,11 +3041,8 @@
        "udp_options": []
       }
      ],
-     "freeform_tags": {},
-     "id": "ocid1.securitylist.oc1.iad.aaaaaaaasjbfdcxuwci34znqaerfayge4enahyl3axfa64iunh3ekaqbnwjq",
      "ingress_security_rules": [
       {
-       "description": "",
        "icmp_options": [],
        "protocol": "6",
        "source": "10.0.0.0/24",
@@ -4988,7 +3058,6 @@
        "udp_options": []
       },
       {
-       "description": "",
        "icmp_options": [],
        "protocol": "6",
        "source": "10.0.0.0/24",
@@ -5004,7 +3073,6 @@
        "udp_options": []
       },
       {
-       "description": "",
        "icmp_options": [],
        "protocol": "all",
        "source": "10.0.0.0/16",
@@ -5014,10 +3082,7 @@
        "udp_options": []
       }
      ],
-     "state": "AVAILABLE",
-     "time_created": "2023-04-20 11:21:06.419 +0000 UTC",
-     "timeouts": null,
-     "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a"
+     "timeouts": null
     },
     "after_sensitive": {
      "defined_tags": {},
@@ -5055,113 +3120,52 @@
       }
      ]
     },
-    "after_unknown": {},
-    "before": {
-     "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-     "defined_tags": {
-      "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-      "Oracle-Tags.CreatedOn": "2023-04-20T11:21:06.188Z"
-     },
-     "display_name": "k8s-private-subnet-sl",
+    "after_unknown": {
+     "defined_tags": true,
      "egress_security_rules": [
       {
-       "description": "",
-       "destination": "0.0.0.0/0",
-       "destination_type": "CIDR_BLOCK",
+       "description": true,
        "icmp_options": [],
-       "protocol": "all",
-       "stateless": false,
        "tcp_options": [],
        "udp_options": []
       }
      ],
-     "freeform_tags": {},
-     "id": "ocid1.securitylist.oc1.iad.aaaaaaaasjbfdcxuwci34znqaerfayge4enahyl3axfa64iunh3ekaqbnwjq",
+     "freeform_tags": true,
+     "id": true,
      "ingress_security_rules": [
       {
-       "description": "",
+       "description": true,
        "icmp_options": [],
-       "protocol": "6",
-       "source": "10.0.0.0/24",
-       "source_type": "CIDR_BLOCK",
-       "stateless": false,
        "tcp_options": [
         {
-         "max": 10256,
-         "min": 10256,
          "source_port_range": []
         }
        ],
        "udp_options": []
       },
       {
-       "description": "",
+       "description": true,
        "icmp_options": [],
-       "protocol": "6",
-       "source": "10.0.0.0/24",
-       "source_type": "CIDR_BLOCK",
-       "stateless": false,
        "tcp_options": [
         {
-         "max": 31600,
-         "min": 31600,
          "source_port_range": []
         }
        ],
        "udp_options": []
       },
       {
-       "description": "",
+       "description": true,
        "icmp_options": [],
-       "protocol": "all",
-       "source": "10.0.0.0/16",
-       "source_type": "CIDR_BLOCK",
-       "stateless": false,
        "tcp_options": [],
        "udp_options": []
       }
      ],
-     "state": "AVAILABLE",
-     "time_created": "2023-04-20 11:21:06.419 +0000 UTC",
-     "timeouts": null,
-     "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a"
+     "state": true,
+     "time_created": true,
+     "vcn_id": true
     },
-    "before_sensitive": {
-     "defined_tags": {},
-     "egress_security_rules": [
-      {
-       "icmp_options": [],
-       "tcp_options": [],
-       "udp_options": []
-      }
-     ],
-     "freeform_tags": {},
-     "ingress_security_rules": [
-      {
-       "icmp_options": [],
-       "tcp_options": [
-        {
-         "source_port_range": []
-        }
-       ],
-       "udp_options": []
-      },
-      {
-       "icmp_options": [],
-       "tcp_options": [
-        {
-         "source_port_range": []
-        }
-       ],
-       "udp_options": []
-      },
-      {
-       "icmp_options": [],
-       "tcp_options": [],
-       "udp_options": []
-      }
-     ]
-    }
+    "before": null,
+    "before_sensitive": false
    },
    "mode": "managed",
    "name": "private_subnet_sl",
@@ -5172,18 +3176,13 @@
    "address": "oci_core_security_list.public_subnet_sl",
    "change": {
     "actions": [
-     "no-op"
+     "create"
     ],
     "after": {
      "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-     "defined_tags": {
-      "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-      "Oracle-Tags.CreatedOn": "2023-04-20T11:21:06.222Z"
-     },
      "display_name": "k8s-public-subnet-sl",
      "egress_security_rules": [
       {
-       "description": "",
        "destination": "0.0.0.0/0",
        "destination_type": "CIDR_BLOCK",
        "icmp_options": [],
@@ -5193,7 +3192,6 @@
        "udp_options": []
       },
       {
-       "description": "",
        "destination": "10.0.1.0/24",
        "destination_type": "CIDR_BLOCK",
        "icmp_options": [],
@@ -5209,7 +3207,6 @@
        "udp_options": []
       },
       {
-       "description": "",
        "destination": "10.0.1.0/24",
        "destination_type": "CIDR_BLOCK",
        "icmp_options": [],
@@ -5225,11 +3222,8 @@
        "udp_options": []
       }
      ],
-     "freeform_tags": {},
-     "id": "ocid1.securitylist.oc1.iad.aaaaaaaawzkbks3zosbne5ueipfcqqbk4plcqxjfjbjzzvvs2jxw53u6hkvq",
      "ingress_security_rules": [
       {
-       "description": "",
        "icmp_options": [],
        "protocol": "6",
        "source": "0.0.0.0/0",
@@ -5245,7 +3239,6 @@
        "udp_options": []
       },
       {
-       "description": "",
        "icmp_options": [],
        "protocol": "6",
        "source": "0.0.0.0/0",
@@ -5261,7 +3254,6 @@
        "udp_options": []
       },
       {
-       "description": "",
        "icmp_options": [],
        "protocol": "all",
        "source": "10.0.0.0/16",
@@ -5271,10 +3263,7 @@
        "udp_options": []
       }
      ],
-     "state": "AVAILABLE",
-     "time_created": "2023-04-20 11:21:06.284 +0000 UTC",
-     "timeouts": null,
-     "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a"
+     "timeouts": null
     },
     "after_sensitive": {
      "defined_tags": {},
@@ -5330,163 +3319,72 @@
       }
      ]
     },
-    "after_unknown": {},
-    "before": {
-     "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-     "defined_tags": {
-      "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-      "Oracle-Tags.CreatedOn": "2023-04-20T11:21:06.222Z"
-     },
-     "display_name": "k8s-public-subnet-sl",
+    "after_unknown": {
+     "defined_tags": true,
      "egress_security_rules": [
       {
-       "description": "",
-       "destination": "0.0.0.0/0",
-       "destination_type": "CIDR_BLOCK",
+       "description": true,
        "icmp_options": [],
-       "protocol": "all",
-       "stateless": false,
        "tcp_options": [],
        "udp_options": []
       },
       {
-       "description": "",
-       "destination": "10.0.1.0/24",
-       "destination_type": "CIDR_BLOCK",
+       "description": true,
        "icmp_options": [],
-       "protocol": "6",
-       "stateless": false,
        "tcp_options": [
         {
-         "max": 10256,
-         "min": 10256,
          "source_port_range": []
         }
        ],
        "udp_options": []
       },
       {
-       "description": "",
-       "destination": "10.0.1.0/24",
-       "destination_type": "CIDR_BLOCK",
+       "description": true,
        "icmp_options": [],
-       "protocol": "6",
-       "stateless": false,
        "tcp_options": [
         {
-         "max": 31600,
-         "min": 31600,
          "source_port_range": []
         }
        ],
        "udp_options": []
       }
      ],
-     "freeform_tags": {},
-     "id": "ocid1.securitylist.oc1.iad.aaaaaaaawzkbks3zosbne5ueipfcqqbk4plcqxjfjbjzzvvs2jxw53u6hkvq",
+     "freeform_tags": true,
+     "id": true,
      "ingress_security_rules": [
       {
-       "description": "",
+       "description": true,
        "icmp_options": [],
-       "protocol": "6",
-       "source": "0.0.0.0/0",
-       "source_type": "CIDR_BLOCK",
-       "stateless": false,
        "tcp_options": [
         {
-         "max": 6443,
-         "min": 6443,
          "source_port_range": []
         }
        ],
        "udp_options": []
       },
       {
-       "description": "",
+       "description": true,
        "icmp_options": [],
-       "protocol": "6",
-       "source": "0.0.0.0/0",
-       "source_type": "CIDR_BLOCK",
-       "stateless": false,
        "tcp_options": [
         {
-         "max": 80,
-         "min": 80,
          "source_port_range": []
         }
        ],
        "udp_options": []
       },
       {
-       "description": "",
+       "description": true,
        "icmp_options": [],
-       "protocol": "all",
-       "source": "10.0.0.0/16",
-       "source_type": "CIDR_BLOCK",
-       "stateless": false,
        "tcp_options": [],
        "udp_options": []
       }
      ],
-     "state": "AVAILABLE",
-     "time_created": "2023-04-20 11:21:06.284 +0000 UTC",
-     "timeouts": null,
-     "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a"
+     "state": true,
+     "time_created": true,
+     "vcn_id": true
     },
-    "before_sensitive": {
-     "defined_tags": {},
-     "egress_security_rules": [
-      {
-       "icmp_options": [],
-       "tcp_options": [],
-       "udp_options": []
-      },
-      {
-       "icmp_options": [],
-       "tcp_options": [
-        {
-         "source_port_range": []
-        }
-       ],
-       "udp_options": []
-      },
-      {
-       "icmp_options": [],
-       "tcp_options": [
-        {
-         "source_port_range": []
-        }
-       ],
-       "udp_options": []
-      }
-     ],
-     "freeform_tags": {},
-     "ingress_security_rules": [
-      {
-       "icmp_options": [],
-       "tcp_options": [
-        {
-         "source_port_range": []
-        }
-       ],
-       "udp_options": []
-      },
-      {
-       "icmp_options": [],
-       "tcp_options": [
-        {
-         "source_port_range": []
-        }
-       ],
-       "udp_options": []
-      },
-      {
-       "icmp_options": [],
-       "tcp_options": [],
-       "udp_options": []
-      }
-     ]
-    }
+    "before": null,
+    "before_sensitive": false
    },
    "mode": "managed",
    "name": "public_subnet_sl",
@@ -5497,85 +3395,43 @@
    "address": "oci_core_subnet.vcn_private_subnet",
    "change": {
     "actions": [
-     "no-op"
+     "create"
     ],
     "after": {
-     "availability_domain": null,
      "cidr_block": "10.0.1.0/24",
      "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-     "defined_tags": {
-      "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-      "Oracle-Tags.CreatedOn": "2023-04-20T11:21:11.397Z"
-     },
-     "dhcp_options_id": "ocid1.dhcpoptions.oc1.iad.aaaaaaaadpggo7tmippv6xq7vejqdlepiz2wagxalddvj42atmimzudemnga",
      "display_name": "k8s-private-subnet",
-     "dns_label": null,
-     "freeform_tags": {},
-     "id": "ocid1.subnet.oc1.iad.aaaaaaaatalftxvodwnyddtc5tclephdguftpaxrxtnxnk4urcxtnudre3ta",
-     "ipv6cidr_block": null,
-     "ipv6cidr_blocks": [],
-     "ipv6virtual_router_ip": null,
-     "prohibit_internet_ingress": true,
      "prohibit_public_ip_on_vnic": true,
-     "route_table_id": "ocid1.routetable.oc1.iad.aaaaaaaaeqnl4gvwhvrbnu47abcz4qwjx5o7kicwtm6y4ykhq2muks7al2qa",
-     "security_list_ids": [
-      "ocid1.securitylist.oc1.iad.aaaaaaaasjbfdcxuwci34znqaerfayge4enahyl3axfa64iunh3ekaqbnwjq"
-     ],
-     "state": "AVAILABLE",
-     "subnet_domain_name": null,
-     "time_created": "2023-04-20 11:21:11.446 +0000 UTC",
-     "timeouts": null,
-     "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a",
-     "virtual_router_ip": "10.0.1.1",
-     "virtual_router_mac": "00:00:17:EB:49:50"
+     "timeouts": null
     },
     "after_sensitive": {
      "defined_tags": {},
      "freeform_tags": {},
      "ipv6cidr_blocks": [],
-     "security_list_ids": [
-      false
-     ]
+     "security_list_ids": []
     },
-    "after_unknown": {},
-    "before": {
-     "availability_domain": null,
-     "cidr_block": "10.0.1.0/24",
-     "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-     "defined_tags": {
-      "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-      "Oracle-Tags.CreatedOn": "2023-04-20T11:21:11.397Z"
-     },
-     "dhcp_options_id": "ocid1.dhcpoptions.oc1.iad.aaaaaaaadpggo7tmippv6xq7vejqdlepiz2wagxalddvj42atmimzudemnga",
-     "display_name": "k8s-private-subnet",
-     "dns_label": null,
-     "freeform_tags": {},
-     "id": "ocid1.subnet.oc1.iad.aaaaaaaatalftxvodwnyddtc5tclephdguftpaxrxtnxnk4urcxtnudre3ta",
-     "ipv6cidr_block": null,
-     "ipv6cidr_blocks": [],
-     "ipv6virtual_router_ip": null,
+    "after_unknown": {
+     "availability_domain": true,
+     "defined_tags": true,
+     "dhcp_options_id": true,
+     "dns_label": true,
+     "freeform_tags": true,
+     "id": true,
+     "ipv6cidr_block": true,
+     "ipv6cidr_blocks": true,
+     "ipv6virtual_router_ip": true,
      "prohibit_internet_ingress": true,
-     "prohibit_public_ip_on_vnic": true,
-     "route_table_id": "ocid1.routetable.oc1.iad.aaaaaaaaeqnl4gvwhvrbnu47abcz4qwjx5o7kicwtm6y4ykhq2muks7al2qa",
-     "security_list_ids": [
-      "ocid1.securitylist.oc1.iad.aaaaaaaasjbfdcxuwci34znqaerfayge4enahyl3axfa64iunh3ekaqbnwjq"
-     ],
-     "state": "AVAILABLE",
-     "subnet_domain_name": null,
-     "time_created": "2023-04-20 11:21:11.446 +0000 UTC",
-     "timeouts": null,
-     "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a",
-     "virtual_router_ip": "10.0.1.1",
-     "virtual_router_mac": "00:00:17:EB:49:50"
+     "route_table_id": true,
+     "security_list_ids": true,
+     "state": true,
+     "subnet_domain_name": true,
+     "time_created": true,
+     "vcn_id": true,
+     "virtual_router_ip": true,
+     "virtual_router_mac": true
     },
-    "before_sensitive": {
-     "defined_tags": {},
-     "freeform_tags": {},
-     "ipv6cidr_blocks": [],
-     "security_list_ids": [
-      false
-     ]
-    }
+    "before": null,
+    "before_sensitive": false
    },
    "mode": "managed",
    "name": "vcn_private_subnet",
@@ -5586,85 +3442,43 @@
    "address": "oci_core_subnet.vcn_public_subnet",
    "change": {
     "actions": [
-     "no-op"
+     "create"
     ],
     "after": {
-     "availability_domain": null,
      "cidr_block": "10.0.0.0/24",
      "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-     "defined_tags": {
-      "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-      "Oracle-Tags.CreatedOn": "2023-04-20T11:21:08.677Z"
-     },
-     "dhcp_options_id": "ocid1.dhcpoptions.oc1.iad.aaaaaaaadpggo7tmippv6xq7vejqdlepiz2wagxalddvj42atmimzudemnga",
      "display_name": "k8s-public-subnet",
-     "dns_label": null,
-     "freeform_tags": {},
-     "id": "ocid1.subnet.oc1.iad.aaaaaaaaumsvv4jxaetmpqa4ak7h5uewkzkq37ayvyoknvk337a6elnmsf6q",
-     "ipv6cidr_block": null,
-     "ipv6cidr_blocks": [],
-     "ipv6virtual_router_ip": null,
-     "prohibit_internet_ingress": false,
-     "prohibit_public_ip_on_vnic": false,
-     "route_table_id": "ocid1.routetable.oc1.iad.aaaaaaaa7oxz5rcz7fjxycethp4pjliohbsj4ty5pnkx37pqmdkx3efytada",
-     "security_list_ids": [
-      "ocid1.securitylist.oc1.iad.aaaaaaaawzkbks3zosbne5ueipfcqqbk4plcqxjfjbjzzvvs2jxw53u6hkvq"
-     ],
-     "state": "AVAILABLE",
-     "subnet_domain_name": null,
-     "time_created": "2023-04-20 11:21:08.781 +0000 UTC",
-     "timeouts": null,
-     "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a",
-     "virtual_router_ip": "10.0.0.1",
-     "virtual_router_mac": "00:00:17:EB:49:50"
+     "timeouts": null
     },
     "after_sensitive": {
      "defined_tags": {},
      "freeform_tags": {},
      "ipv6cidr_blocks": [],
-     "security_list_ids": [
-      false
-     ]
+     "security_list_ids": []
     },
-    "after_unknown": {},
-    "before": {
-     "availability_domain": null,
-     "cidr_block": "10.0.0.0/24",
-     "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-     "defined_tags": {
-      "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-      "Oracle-Tags.CreatedOn": "2023-04-20T11:21:08.677Z"
-     },
-     "dhcp_options_id": "ocid1.dhcpoptions.oc1.iad.aaaaaaaadpggo7tmippv6xq7vejqdlepiz2wagxalddvj42atmimzudemnga",
-     "display_name": "k8s-public-subnet",
-     "dns_label": null,
-     "freeform_tags": {},
-     "id": "ocid1.subnet.oc1.iad.aaaaaaaaumsvv4jxaetmpqa4ak7h5uewkzkq37ayvyoknvk337a6elnmsf6q",
-     "ipv6cidr_block": null,
-     "ipv6cidr_blocks": [],
-     "ipv6virtual_router_ip": null,
-     "prohibit_internet_ingress": false,
-     "prohibit_public_ip_on_vnic": false,
-     "route_table_id": "ocid1.routetable.oc1.iad.aaaaaaaa7oxz5rcz7fjxycethp4pjliohbsj4ty5pnkx37pqmdkx3efytada",
-     "security_list_ids": [
-      "ocid1.securitylist.oc1.iad.aaaaaaaawzkbks3zosbne5ueipfcqqbk4plcqxjfjbjzzvvs2jxw53u6hkvq"
-     ],
-     "state": "AVAILABLE",
-     "subnet_domain_name": null,
-     "time_created": "2023-04-20 11:21:08.781 +0000 UTC",
-     "timeouts": null,
-     "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a",
-     "virtual_router_ip": "10.0.0.1",
-     "virtual_router_mac": "00:00:17:EB:49:50"
+    "after_unknown": {
+     "availability_domain": true,
+     "defined_tags": true,
+     "dhcp_options_id": true,
+     "dns_label": true,
+     "freeform_tags": true,
+     "id": true,
+     "ipv6cidr_block": true,
+     "ipv6cidr_blocks": true,
+     "ipv6virtual_router_ip": true,
+     "prohibit_internet_ingress": true,
+     "prohibit_public_ip_on_vnic": true,
+     "route_table_id": true,
+     "security_list_ids": true,
+     "state": true,
+     "subnet_domain_name": true,
+     "time_created": true,
+     "vcn_id": true,
+     "virtual_router_ip": true,
+     "virtual_router_mac": true
     },
-    "before_sensitive": {
-     "defined_tags": {},
-     "freeform_tags": {},
-     "ipv6cidr_blocks": [],
-     "security_list_ids": [
-      false
-     ]
-    }
+    "before": null,
+    "before_sensitive": false
    },
    "mode": "managed",
    "name": "vcn_public_subnet",
@@ -5675,25 +3489,11 @@
    "address": "module.vcn.oci_core_default_security_list.lockdown[0]",
    "change": {
     "actions": [
-     "no-op"
+     "create"
     ],
     "after": {
-     "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-     "defined_tags": {
-      "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-      "Oracle-Tags.CreatedOn": "2023-04-20T11:21:01.400Z"
-     },
-     "display_name": "Default Security List for k8s-vcn",
      "egress_security_rules": [],
-     "freeform_tags": {
-      "module": "oracle-terraform-modules/vcn/oci",
-      "terraformed": "Please do not edit manually"
-     },
-     "id": "ocid1.securitylist.oc1.iad.aaaaaaaaiarlfgnrfsyka7u5ihdnpvr4tlro3rwoevu5dmae5op2gsdustha",
      "ingress_security_rules": [],
-     "manage_default_resource_id": "ocid1.securitylist.oc1.iad.aaaaaaaaiarlfgnrfsyka7u5ihdnpvr4tlro3rwoevu5dmae5op2gsdustha",
-     "state": "AVAILABLE",
-     "time_created": "2023-04-20 11:21:01.717 +0000 UTC",
      "timeouts": null
     },
     "after_sensitive": {
@@ -5702,32 +3502,20 @@
      "freeform_tags": {},
      "ingress_security_rules": []
     },
-    "after_unknown": {},
-    "before": {
-     "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-     "defined_tags": {
-      "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-      "Oracle-Tags.CreatedOn": "2023-04-20T11:21:01.400Z"
-     },
-     "display_name": "Default Security List for k8s-vcn",
+    "after_unknown": {
+     "compartment_id": true,
+     "defined_tags": true,
+     "display_name": true,
      "egress_security_rules": [],
-     "freeform_tags": {
-      "module": "oracle-terraform-modules/vcn/oci",
-      "terraformed": "Please do not edit manually"
-     },
-     "id": "ocid1.securitylist.oc1.iad.aaaaaaaaiarlfgnrfsyka7u5ihdnpvr4tlro3rwoevu5dmae5op2gsdustha",
+     "freeform_tags": true,
+     "id": true,
      "ingress_security_rules": [],
-     "manage_default_resource_id": "ocid1.securitylist.oc1.iad.aaaaaaaaiarlfgnrfsyka7u5ihdnpvr4tlro3rwoevu5dmae5op2gsdustha",
-     "state": "AVAILABLE",
-     "time_created": "2023-04-20 11:21:01.717 +0000 UTC",
-     "timeouts": null
+     "manage_default_resource_id": true,
+     "state": true,
+     "time_created": true
     },
-    "before_sensitive": {
-     "defined_tags": {},
-     "egress_security_rules": [],
-     "freeform_tags": {},
-     "ingress_security_rules": []
-    }
+    "before": null,
+    "before_sensitive": false
    },
    "index": 0,
    "mode": "managed",
@@ -5740,55 +3528,33 @@
    "address": "module.vcn.oci_core_internet_gateway.ig[0]",
    "change": {
     "actions": [
-     "no-op"
+     "create"
     ],
     "after": {
      "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-     "defined_tags": {
-      "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-      "Oracle-Tags.CreatedOn": "2023-04-20T11:21:06.268Z"
-     },
      "display_name": "internet-gateway",
      "enabled": true,
      "freeform_tags": {
       "module": "oracle-terraform-modules/vcn/oci",
       "terraformed": "Please do not edit manually"
      },
-     "id": "ocid1.internetgateway.oc1.iad.aaaaaaaarazkzf6xjapifjjhnnxc3dmwsrm5aq3mzmvs5msv4fvaqgu5rida",
-     "route_table_id": null,
-     "state": "AVAILABLE",
-     "time_created": "2023-04-20 11:21:06.353 +0000 UTC",
-     "timeouts": null,
-     "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a"
+     "timeouts": null
     },
     "after_sensitive": {
      "defined_tags": {},
      "freeform_tags": {}
     },
-    "after_unknown": {},
-    "before": {
-     "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-     "defined_tags": {
-      "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-      "Oracle-Tags.CreatedOn": "2023-04-20T11:21:06.268Z"
-     },
-     "display_name": "internet-gateway",
-     "enabled": true,
-     "freeform_tags": {
-      "module": "oracle-terraform-modules/vcn/oci",
-      "terraformed": "Please do not edit manually"
-     },
-     "id": "ocid1.internetgateway.oc1.iad.aaaaaaaarazkzf6xjapifjjhnnxc3dmwsrm5aq3mzmvs5msv4fvaqgu5rida",
-     "route_table_id": null,
-     "state": "AVAILABLE",
-     "time_created": "2023-04-20 11:21:06.353 +0000 UTC",
-     "timeouts": null,
-     "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a"
+    "after_unknown": {
+     "defined_tags": true,
+     "freeform_tags": {},
+     "id": true,
+     "route_table_id": true,
+     "state": true,
+     "time_created": true,
+     "vcn_id": true
     },
-    "before_sensitive": {
-     "defined_tags": {},
-     "freeform_tags": {}
-    }
+    "before": null,
+    "before_sensitive": false
    },
    "index": 0,
    "mode": "managed",
@@ -5801,59 +3567,35 @@
    "address": "module.vcn.oci_core_nat_gateway.nat_gateway[0]",
    "change": {
     "actions": [
-     "no-op"
+     "create"
     ],
     "after": {
-     "block_traffic": false,
      "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-     "defined_tags": {
-      "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-      "Oracle-Tags.CreatedOn": "2023-04-20T11:21:05.886Z"
-     },
      "display_name": "nat-gateway",
      "freeform_tags": {
       "module": "oracle-terraform-modules/vcn/oci",
       "terraformed": "Please do not edit manually"
      },
-     "id": "ocid1.natgateway.oc1.iad.aaaaaaaa5wyuko47x2fpo6ylhnz42nhagzklharwenmvyo26knjbsp6w46gq",
-     "nat_ip": "129.80.173.126",
-     "public_ip_id": "ocid1.publicip.oc1.iad.aaaaaaaatz6mzcbze2dethmzb6ybvhbugnfuydyekkotzslfb5ndd6wdr7vq",
-     "route_table_id": null,
-     "state": "AVAILABLE",
-     "time_created": "2023-04-20 11:21:06.35 +0000 UTC",
-     "timeouts": null,
-     "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a"
+     "timeouts": null
     },
     "after_sensitive": {
      "defined_tags": {},
      "freeform_tags": {}
     },
-    "after_unknown": {},
-    "before": {
-     "block_traffic": false,
-     "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-     "defined_tags": {
-      "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-      "Oracle-Tags.CreatedOn": "2023-04-20T11:21:05.886Z"
-     },
-     "display_name": "nat-gateway",
-     "freeform_tags": {
-      "module": "oracle-terraform-modules/vcn/oci",
-      "terraformed": "Please do not edit manually"
-     },
-     "id": "ocid1.natgateway.oc1.iad.aaaaaaaa5wyuko47x2fpo6ylhnz42nhagzklharwenmvyo26knjbsp6w46gq",
-     "nat_ip": "129.80.173.126",
-     "public_ip_id": "ocid1.publicip.oc1.iad.aaaaaaaatz6mzcbze2dethmzb6ybvhbugnfuydyekkotzslfb5ndd6wdr7vq",
-     "route_table_id": null,
-     "state": "AVAILABLE",
-     "time_created": "2023-04-20 11:21:06.35 +0000 UTC",
-     "timeouts": null,
-     "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a"
+    "after_unknown": {
+     "block_traffic": true,
+     "defined_tags": true,
+     "freeform_tags": {},
+     "id": true,
+     "nat_ip": true,
+     "public_ip_id": true,
+     "route_table_id": true,
+     "state": true,
+     "time_created": true,
+     "vcn_id": true
     },
-    "before_sensitive": {
-     "defined_tags": {},
-     "freeform_tags": {}
-    }
+    "before": null,
+    "before_sensitive": false
    },
    "index": 0,
    "mode": "managed",
@@ -5866,34 +3608,22 @@
    "address": "module.vcn.oci_core_route_table.ig[0]",
    "change": {
     "actions": [
-     "no-op"
+     "create"
     ],
     "after": {
      "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-     "defined_tags": {
-      "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-      "Oracle-Tags.CreatedOn": "2023-04-20T11:21:07.244Z"
-     },
      "display_name": "internet-route",
      "freeform_tags": {
       "module": "oracle-terraform-modules/vcn/oci",
       "terraformed": "Please do not edit manually"
      },
-     "id": "ocid1.routetable.oc1.iad.aaaaaaaa7oxz5rcz7fjxycethp4pjliohbsj4ty5pnkx37pqmdkx3efytada",
      "route_rules": [
       {
-       "cidr_block": "",
        "description": "Terraformed - Auto-generated at Internet Gateway creation: Internet Gateway as default gateway",
-       "destination": "0.0.0.0/0",
-       "destination_type": "CIDR_BLOCK",
-       "network_entity_id": "ocid1.internetgateway.oc1.iad.aaaaaaaarazkzf6xjapifjjhnnxc3dmwsrm5aq3mzmvs5msv4fvaqgu5rida",
-       "route_type": ""
+       "destination": "0.0.0.0/0"
       }
      ],
-     "state": "AVAILABLE",
-     "time_created": "2023-04-20 11:21:07.268 +0000 UTC",
-     "timeouts": null,
-     "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a"
+     "timeouts": null
     },
     "after_sensitive": {
      "defined_tags": {},
@@ -5902,41 +3632,24 @@
       {}
      ]
     },
-    "after_unknown": {},
-    "before": {
-     "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-     "defined_tags": {
-      "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-      "Oracle-Tags.CreatedOn": "2023-04-20T11:21:07.244Z"
-     },
-     "display_name": "internet-route",
-     "freeform_tags": {
-      "module": "oracle-terraform-modules/vcn/oci",
-      "terraformed": "Please do not edit manually"
-     },
-     "id": "ocid1.routetable.oc1.iad.aaaaaaaa7oxz5rcz7fjxycethp4pjliohbsj4ty5pnkx37pqmdkx3efytada",
+    "after_unknown": {
+     "defined_tags": true,
+     "freeform_tags": {},
+     "id": true,
      "route_rules": [
       {
-       "cidr_block": "",
-       "description": "Terraformed - Auto-generated at Internet Gateway creation: Internet Gateway as default gateway",
-       "destination": "0.0.0.0/0",
-       "destination_type": "CIDR_BLOCK",
-       "network_entity_id": "ocid1.internetgateway.oc1.iad.aaaaaaaarazkzf6xjapifjjhnnxc3dmwsrm5aq3mzmvs5msv4fvaqgu5rida",
-       "route_type": ""
+       "cidr_block": true,
+       "destination_type": true,
+       "network_entity_id": true,
+       "route_type": true
       }
      ],
-     "state": "AVAILABLE",
-     "time_created": "2023-04-20 11:21:07.268 +0000 UTC",
-     "timeouts": null,
-     "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a"
+     "state": true,
+     "time_created": true,
+     "vcn_id": true
     },
-    "before_sensitive": {
-     "defined_tags": {},
-     "freeform_tags": {},
-     "route_rules": [
-      {}
-     ]
-    }
+    "before": null,
+    "before_sensitive": false
    },
    "index": 0,
    "mode": "managed",
@@ -5949,42 +3662,28 @@
    "address": "module.vcn.oci_core_route_table.nat[0]",
    "change": {
     "actions": [
-     "no-op"
+     "create"
     ],
     "after": {
      "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-     "defined_tags": {
-      "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-      "Oracle-Tags.CreatedOn": "2023-04-20T11:21:08.931Z"
-     },
      "display_name": "nat-route",
      "freeform_tags": {
       "module": "oracle-terraform-modules/vcn/oci",
       "terraformed": "Please do not edit manually"
      },
-     "id": "ocid1.routetable.oc1.iad.aaaaaaaaeqnl4gvwhvrbnu47abcz4qwjx5o7kicwtm6y4ykhq2muks7al2qa",
      "route_rules": [
       {
-       "cidr_block": "",
        "description": "Terraformed - Auto-generated at NAT Gateway creation: NAT Gateway as default gateway",
        "destination": "0.0.0.0/0",
-       "destination_type": "CIDR_BLOCK",
-       "network_entity_id": "ocid1.natgateway.oc1.iad.aaaaaaaa5wyuko47x2fpo6ylhnz42nhagzklharwenmvyo26knjbsp6w46gq",
-       "route_type": ""
+       "destination_type": "CIDR_BLOCK"
       },
       {
-       "cidr_block": "",
        "description": "Terraformed - Auto-generated at Service Gateway creation: All Services in region to Service Gateway",
        "destination": "all-iad-services-in-oracle-services-network",
-       "destination_type": "SERVICE_CIDR_BLOCK",
-       "network_entity_id": "ocid1.servicegateway.oc1.iad.aaaaaaaa254mwjk4dnx3f7qkyd4belhpsbbcv4a4htsfitskrvsh57abucxa",
-       "route_type": ""
+       "destination_type": "SERVICE_CIDR_BLOCK"
       }
      ],
-     "state": "AVAILABLE",
-     "time_created": "2023-04-20 11:21:09.021 +0000 UTC",
-     "timeouts": null,
-     "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a"
+     "timeouts": null
     },
     "after_sensitive": {
      "defined_tags": {},
@@ -5994,50 +3693,28 @@
       {}
      ]
     },
-    "after_unknown": {},
-    "before": {
-     "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-     "defined_tags": {
-      "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-      "Oracle-Tags.CreatedOn": "2023-04-20T11:21:08.931Z"
-     },
-     "display_name": "nat-route",
-     "freeform_tags": {
-      "module": "oracle-terraform-modules/vcn/oci",
-      "terraformed": "Please do not edit manually"
-     },
-     "id": "ocid1.routetable.oc1.iad.aaaaaaaaeqnl4gvwhvrbnu47abcz4qwjx5o7kicwtm6y4ykhq2muks7al2qa",
+    "after_unknown": {
+     "defined_tags": true,
+     "freeform_tags": {},
+     "id": true,
      "route_rules": [
       {
-       "cidr_block": "",
-       "description": "Terraformed - Auto-generated at NAT Gateway creation: NAT Gateway as default gateway",
-       "destination": "0.0.0.0/0",
-       "destination_type": "CIDR_BLOCK",
-       "network_entity_id": "ocid1.natgateway.oc1.iad.aaaaaaaa5wyuko47x2fpo6ylhnz42nhagzklharwenmvyo26knjbsp6w46gq",
-       "route_type": ""
+       "cidr_block": true,
+       "network_entity_id": true,
+       "route_type": true
       },
       {
-       "cidr_block": "",
-       "description": "Terraformed - Auto-generated at Service Gateway creation: All Services in region to Service Gateway",
-       "destination": "all-iad-services-in-oracle-services-network",
-       "destination_type": "SERVICE_CIDR_BLOCK",
-       "network_entity_id": "ocid1.servicegateway.oc1.iad.aaaaaaaa254mwjk4dnx3f7qkyd4belhpsbbcv4a4htsfitskrvsh57abucxa",
-       "route_type": ""
+       "cidr_block": true,
+       "network_entity_id": true,
+       "route_type": true
       }
      ],
-     "state": "AVAILABLE",
-     "time_created": "2023-04-20 11:21:09.021 +0000 UTC",
-     "timeouts": null,
-     "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a"
+     "state": true,
+     "time_created": true,
+     "vcn_id": true
     },
-    "before_sensitive": {
-     "defined_tags": {},
-     "freeform_tags": {},
-     "route_rules": [
-      {},
-      {}
-     ]
-    }
+    "before": null,
+    "before_sensitive": false
    },
    "index": 0,
    "mode": "managed",
@@ -6050,32 +3727,21 @@
    "address": "module.vcn.oci_core_service_gateway.service_gateway[0]",
    "change": {
     "actions": [
-     "no-op"
+     "create"
     ],
     "after": {
-     "block_traffic": false,
      "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-     "defined_tags": {
-      "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-      "Oracle-Tags.CreatedOn": "2023-04-20T11:21:06.211Z"
-     },
      "display_name": "service-gateway",
      "freeform_tags": {
       "module": "oracle-terraform-modules/vcn/oci",
       "terraformed": "Please do not edit manually"
      },
-     "id": "ocid1.servicegateway.oc1.iad.aaaaaaaa254mwjk4dnx3f7qkyd4belhpsbbcv4a4htsfitskrvsh57abucxa",
-     "route_table_id": null,
      "services": [
       {
-       "service_id": "ocid1.service.oc1.iad.aaaaaaaam4zfmy2rjue6fmglumm3czgisxzrnvrwqeodtztg7hwa272mlfna",
-       "service_name": "All IAD Services In Oracle Services Network"
+       "service_id": "ocid1.service.oc1.iad.aaaaaaaam4zfmy2rjue6fmglumm3czgisxzrnvrwqeodtztg7hwa272mlfna"
       }
      ],
-     "state": "AVAILABLE",
-     "time_created": "2023-04-20 11:21:07.152 +0000 UTC",
-     "timeouts": null,
-     "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a"
+     "timeouts": null
     },
     "after_sensitive": {
      "defined_tags": {},
@@ -6084,39 +3750,23 @@
       {}
      ]
     },
-    "after_unknown": {},
-    "before": {
-     "block_traffic": false,
-     "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-     "defined_tags": {
-      "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-      "Oracle-Tags.CreatedOn": "2023-04-20T11:21:06.211Z"
-     },
-     "display_name": "service-gateway",
-     "freeform_tags": {
-      "module": "oracle-terraform-modules/vcn/oci",
-      "terraformed": "Please do not edit manually"
-     },
-     "id": "ocid1.servicegateway.oc1.iad.aaaaaaaa254mwjk4dnx3f7qkyd4belhpsbbcv4a4htsfitskrvsh57abucxa",
-     "route_table_id": null,
+    "after_unknown": {
+     "block_traffic": true,
+     "defined_tags": true,
+     "freeform_tags": {},
+     "id": true,
+     "route_table_id": true,
      "services": [
       {
-       "service_id": "ocid1.service.oc1.iad.aaaaaaaam4zfmy2rjue6fmglumm3czgisxzrnvrwqeodtztg7hwa272mlfna",
-       "service_name": "All IAD Services In Oracle Services Network"
+       "service_name": true
       }
      ],
-     "state": "AVAILABLE",
-     "time_created": "2023-04-20 11:21:07.152 +0000 UTC",
-     "timeouts": null,
-     "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a"
+     "state": true,
+     "time_created": true,
+     "vcn_id": true
     },
-    "before_sensitive": {
-     "defined_tags": {},
-     "freeform_tags": {},
-     "services": [
-      {}
-     ]
-    }
+    "before": null,
+    "before_sensitive": false
    },
    "index": 0,
    "mode": "managed",
@@ -6129,38 +3779,21 @@
    "address": "module.vcn.oci_core_vcn.vcn",
    "change": {
     "actions": [
-     "no-op"
+     "create"
     ],
     "after": {
-     "byoipv6cidr_blocks": [],
-     "byoipv6cidr_details": [],
-     "cidr_block": "10.0.0.0/16",
      "cidr_blocks": [
       "10.0.0.0/16"
      ],
      "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-     "default_dhcp_options_id": "ocid1.dhcpoptions.oc1.iad.aaaaaaaadpggo7tmippv6xq7vejqdlepiz2wagxalddvj42atmimzudemnga",
-     "default_route_table_id": "ocid1.routetable.oc1.iad.aaaaaaaazdgsqvolougnrttxfaewssbm4bx4qiseh77ms6rwvcngyfjhvbua",
-     "default_security_list_id": "ocid1.securitylist.oc1.iad.aaaaaaaaiarlfgnrfsyka7u5ihdnpvr4tlro3rwoevu5dmae5op2gsdustha",
-     "defined_tags": {
-      "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-      "Oracle-Tags.CreatedOn": "2023-04-20T11:21:01.400Z"
-     },
      "display_name": "k8s-vcn",
      "dns_label": "k8svcn",
      "freeform_tags": {
       "module": "oracle-terraform-modules/vcn/oci",
       "terraformed": "Please do not edit manually"
      },
-     "id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a",
-     "ipv6cidr_blocks": [],
-     "ipv6private_cidr_blocks": [],
      "is_ipv6enabled": false,
-     "is_oracle_gua_allocation_enabled": null,
-     "state": "AVAILABLE",
-     "time_created": "2023-04-20 11:21:01.717 +0000 UTC",
-     "timeouts": null,
-     "vcn_domain_name": "k8svcn.oraclevcn.com"
+     "timeouts": null
     },
     "after_sensitive": {
      "byoipv6cidr_blocks": [],
@@ -6173,358 +3806,34 @@
      "ipv6cidr_blocks": [],
      "ipv6private_cidr_blocks": []
     },
-    "after_unknown": {},
-    "before": {
-     "byoipv6cidr_blocks": [],
-     "byoipv6cidr_details": [],
-     "cidr_block": "10.0.0.0/16",
-     "cidr_blocks": [
-      "10.0.0.0/16"
-     ],
-     "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-     "default_dhcp_options_id": "ocid1.dhcpoptions.oc1.iad.aaaaaaaadpggo7tmippv6xq7vejqdlepiz2wagxalddvj42atmimzudemnga",
-     "default_route_table_id": "ocid1.routetable.oc1.iad.aaaaaaaazdgsqvolougnrttxfaewssbm4bx4qiseh77ms6rwvcngyfjhvbua",
-     "default_security_list_id": "ocid1.securitylist.oc1.iad.aaaaaaaaiarlfgnrfsyka7u5ihdnpvr4tlro3rwoevu5dmae5op2gsdustha",
-     "defined_tags": {
-      "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-      "Oracle-Tags.CreatedOn": "2023-04-20T11:21:01.400Z"
-     },
-     "display_name": "k8s-vcn",
-     "dns_label": "k8svcn",
-     "freeform_tags": {
-      "module": "oracle-terraform-modules/vcn/oci",
-      "terraformed": "Please do not edit manually"
-     },
-     "id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a",
-     "ipv6cidr_blocks": [],
-     "ipv6private_cidr_blocks": [],
-     "is_ipv6enabled": false,
-     "is_oracle_gua_allocation_enabled": null,
-     "state": "AVAILABLE",
-     "time_created": "2023-04-20 11:21:01.717 +0000 UTC",
-     "timeouts": null,
-     "vcn_domain_name": "k8svcn.oraclevcn.com"
-    },
-    "before_sensitive": {
-     "byoipv6cidr_blocks": [],
-     "byoipv6cidr_details": [],
+    "after_unknown": {
+     "byoipv6cidr_blocks": true,
+     "byoipv6cidr_details": true,
+     "cidr_block": true,
      "cidr_blocks": [
       false
      ],
-     "defined_tags": {},
+     "default_dhcp_options_id": true,
+     "default_route_table_id": true,
+     "default_security_list_id": true,
+     "defined_tags": true,
      "freeform_tags": {},
-     "ipv6cidr_blocks": [],
-     "ipv6private_cidr_blocks": []
-    }
+     "id": true,
+     "ipv6cidr_blocks": true,
+     "ipv6private_cidr_blocks": true,
+     "is_oracle_gua_allocation_enabled": true,
+     "state": true,
+     "time_created": true,
+     "vcn_domain_name": true
+    },
+    "before": null,
+    "before_sensitive": false
    },
    "mode": "managed",
    "module_address": "module.vcn",
    "name": "vcn",
    "provider_name": "registry.terraform.io/hashicorp/oci",
    "type": "oci_core_vcn"
-  }
- ],
- "resource_drift": [
-  {
-   "address": "oci_containerengine_cluster.k8s_cluster",
-   "change": {
-    "actions": [
-     "update"
-    ],
-    "after": {
-     "available_kubernetes_upgrades": [],
-     "cluster_pod_network_options": [
-      {
-       "cni_type": "FLANNEL_OVERLAY"
-      }
-     ],
-     "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-     "defined_tags": {
-      "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-      "Oracle-Tags.CreatedOn": "2023-04-20T11:21:12.575Z"
-     },
-     "endpoint_config": [
-      {
-       "is_public_ip_enabled": true,
-       "nsg_ids": [],
-       "subnet_id": "ocid1.subnet.oc1.iad.aaaaaaaaumsvv4jxaetmpqa4ak7h5uewkzkq37ayvyoknvk337a6elnmsf6q"
-      }
-     ],
-     "endpoints": [
-      {
-       "kubernetes": "",
-       "private_endpoint": "10.0.0.246:6443",
-       "public_endpoint": "129.80.195.209:6443",
-       "vcn_hostname_endpoint": ""
-      }
-     ],
-     "freeform_tags": {},
-     "id": "ocid1.cluster.oc1.iad.aaaaaaaazwmsedu4onn57sdunk5f2cwnr2onrvgbcc7loowjocogl637xm5q",
-     "image_policy_config": [
-      {
-       "is_policy_enabled": false,
-       "key_details": []
-      }
-     ],
-     "kms_key_id": null,
-     "kubernetes_version": "v1.25.4",
-     "lifecycle_details": null,
-     "metadata": [
-      {
-       "created_by_user_id": "ocid1.user.oc1..aaaaaaaa34q5m5rhn2i3o6g7ufvdv7lornxxln65h4cljz4rlxxtvdnqeerq",
-       "created_by_work_request_id": "ocid1.clustersworkrequest.oc1.iad.aaaaaaaa37aozq6v5pq2rrl2mqleqmtwg66hnyi7k67jsqneuwhkrsglk6ea",
-       "deleted_by_user_id": "",
-       "deleted_by_work_request_id": "",
-       "time_created": "2023-04-20 11:21:14 +0000 UTC",
-       "time_deleted": "",
-       "time_updated": "",
-       "updated_by_user_id": "",
-       "updated_by_work_request_id": ""
-      }
-     ],
-     "name": "k8s-cluster",
-     "options": [
-      {
-       "add_ons": [
-        {
-         "is_kubernetes_dashboard_enabled": false,
-         "is_tiller_enabled": false
-        }
-       ],
-       "admission_controller_options": [
-        {
-         "is_pod_security_policy_enabled": false
-        }
-       ],
-       "kubernetes_network_config": [
-        {
-         "pods_cidr": "10.244.0.0/16",
-         "services_cidr": "10.96.0.0/16"
-        }
-       ],
-       "persistent_volume_config": [
-        {
-         "defined_tags": {},
-         "freeform_tags": {}
-        }
-       ],
-       "service_lb_config": [
-        {
-         "defined_tags": {},
-         "freeform_tags": {}
-        }
-       ],
-       "service_lb_subnet_ids": [
-        "ocid1.subnet.oc1.iad.aaaaaaaaumsvv4jxaetmpqa4ak7h5uewkzkq37ayvyoknvk337a6elnmsf6q"
-       ]
-      }
-     ],
-     "state": "ACTIVE",
-     "timeouts": null,
-     "type": "BASIC_CLUSTER",
-     "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a"
-    },
-    "after_sensitive": {
-     "available_kubernetes_upgrades": [],
-     "cluster_pod_network_options": [
-      {}
-     ],
-     "defined_tags": {},
-     "endpoint_config": [
-      {
-       "nsg_ids": []
-      }
-     ],
-     "endpoints": [
-      {}
-     ],
-     "freeform_tags": {},
-     "image_policy_config": [
-      {
-       "key_details": []
-      }
-     ],
-     "metadata": [
-      {}
-     ],
-     "options": [
-      {
-       "add_ons": [
-        {}
-       ],
-       "admission_controller_options": [
-        {}
-       ],
-       "kubernetes_network_config": [
-        {}
-       ],
-       "persistent_volume_config": [
-        {
-         "defined_tags": {},
-         "freeform_tags": {}
-        }
-       ],
-       "service_lb_config": [
-        {
-         "defined_tags": {},
-         "freeform_tags": {}
-        }
-       ],
-       "service_lb_subnet_ids": [
-        false
-       ]
-      }
-     ]
-    },
-    "after_unknown": {},
-    "before": {
-     "available_kubernetes_upgrades": [],
-     "cluster_pod_network_options": [
-      {
-       "cni_type": "FLANNEL_OVERLAY"
-      }
-     ],
-     "compartment_id": "ocid1.compartment.oc1..aaaaaaaayqbtwebwgjiufspbgt2vzwh4dhmh7pgburzijhed4i74o7xqdnwa",
-     "defined_tags": {
-      "Oracle-Tags.CreatedBy": "oracleidentitycloudservice/gilby1@gmail.com",
-      "Oracle-Tags.CreatedOn": "2023-04-20T11:21:12.575Z"
-     },
-     "endpoint_config": [
-      {
-       "is_public_ip_enabled": true,
-       "nsg_ids": null,
-       "subnet_id": "ocid1.subnet.oc1.iad.aaaaaaaaumsvv4jxaetmpqa4ak7h5uewkzkq37ayvyoknvk337a6elnmsf6q"
-      }
-     ],
-     "endpoints": [
-      {
-       "kubernetes": "",
-       "private_endpoint": "10.0.0.246:6443",
-       "public_endpoint": "129.80.195.209:6443",
-       "vcn_hostname_endpoint": ""
-      }
-     ],
-     "freeform_tags": {},
-     "id": "ocid1.cluster.oc1.iad.aaaaaaaazwmsedu4onn57sdunk5f2cwnr2onrvgbcc7loowjocogl637xm5q",
-     "image_policy_config": [
-      {
-       "is_policy_enabled": false,
-       "key_details": []
-      }
-     ],
-     "kms_key_id": null,
-     "kubernetes_version": "v1.25.4",
-     "lifecycle_details": null,
-     "metadata": [
-      {
-       "created_by_user_id": "ocid1.user.oc1..aaaaaaaa34q5m5rhn2i3o6g7ufvdv7lornxxln65h4cljz4rlxxtvdnqeerq",
-       "created_by_work_request_id": "ocid1.clustersworkrequest.oc1.iad.aaaaaaaa37aozq6v5pq2rrl2mqleqmtwg66hnyi7k67jsqneuwhkrsglk6ea",
-       "deleted_by_user_id": "",
-       "deleted_by_work_request_id": "",
-       "time_created": "2023-04-20 11:21:14 +0000 UTC",
-       "time_deleted": "",
-       "time_updated": "",
-       "updated_by_user_id": "",
-       "updated_by_work_request_id": ""
-      }
-     ],
-     "name": "k8s-cluster",
-     "options": [
-      {
-       "add_ons": [
-        {
-         "is_kubernetes_dashboard_enabled": false,
-         "is_tiller_enabled": false
-        }
-       ],
-       "admission_controller_options": [
-        {
-         "is_pod_security_policy_enabled": false
-        }
-       ],
-       "kubernetes_network_config": [
-        {
-         "pods_cidr": "10.244.0.0/16",
-         "services_cidr": "10.96.0.0/16"
-        }
-       ],
-       "persistent_volume_config": [
-        {
-         "defined_tags": {},
-         "freeform_tags": {}
-        }
-       ],
-       "service_lb_config": [
-        {
-         "defined_tags": {},
-         "freeform_tags": {}
-        }
-       ],
-       "service_lb_subnet_ids": [
-        "ocid1.subnet.oc1.iad.aaaaaaaaumsvv4jxaetmpqa4ak7h5uewkzkq37ayvyoknvk337a6elnmsf6q"
-       ]
-      }
-     ],
-     "state": "ACTIVE",
-     "timeouts": null,
-     "type": "BASIC_CLUSTER",
-     "vcn_id": "ocid1.vcn.oc1.iad.amaaaaaa2322dlya43k7v4you376euvil3inwa2arbhldp3xbqgjpfw6uc2a"
-    },
-    "before_sensitive": {
-     "available_kubernetes_upgrades": [],
-     "cluster_pod_network_options": [
-      {}
-     ],
-     "defined_tags": {},
-     "endpoint_config": [
-      {}
-     ],
-     "endpoints": [
-      {}
-     ],
-     "freeform_tags": {},
-     "image_policy_config": [
-      {
-       "key_details": []
-      }
-     ],
-     "metadata": [
-      {}
-     ],
-     "options": [
-      {
-       "add_ons": [
-        {}
-       ],
-       "admission_controller_options": [
-        {}
-       ],
-       "kubernetes_network_config": [
-        {}
-       ],
-       "persistent_volume_config": [
-        {
-         "defined_tags": {},
-         "freeform_tags": {}
-        }
-       ],
-       "service_lb_config": [
-        {
-         "defined_tags": {},
-         "freeform_tags": {}
-        }
-       ],
-       "service_lb_subnet_ids": [
-        false
-       ]
-      }
-     ]
-    }
-   },
-   "mode": "managed",
-   "name": "k8s_cluster",
-   "provider_name": "registry.terraform.io/hashicorp/oci",
-   "type": "oci_containerengine_cluster"
   }
  ],
  "terraform_version": "1.4.2",
