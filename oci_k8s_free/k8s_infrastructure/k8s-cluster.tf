@@ -72,6 +72,6 @@ resource "oci_network_load_balancer_listener" "free_nlb_listener" {
   default_backend_set_name = oci_network_load_balancer_backend_set.free_nlb_backend_set.name
   name                     = "free-k8s-nlb-listener"
   network_load_balancer_id = oci_network_load_balancer_network_load_balancer.free_nlb.id
-  port                     = "80"
+  port                     = "80,443"
   protocol                 = "TCP"
 }
